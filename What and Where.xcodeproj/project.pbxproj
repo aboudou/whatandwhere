@@ -15,15 +15,6 @@
 		2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E55F0DE3E45000AC0155 /* RootViewController.xib */; };
 		28D3F202112F7DC200FD0661 /* What__Where__How_Much.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* What__Where__How_Much.xcdatamodeld */; };
 		3B200C79132CBFC4001C7168 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B200C78132CBFC4001C7168 /* QuartzCore.framework */; };
-		3B28C04F1372BF240062B9E1 /* MapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B28C03E1372BF240062B9E1 /* MapController.m */; };
-		3B28C0501372BF240062B9E1 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B28C0401372BF240062B9E1 /* RootViewController.m */; };
-		3B28C0511372BF240062B9E1 /* UserAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B28C0421372BF240062B9E1 /* UserAnnotation.m */; };
-		3B28C0521372BF240062B9E1 /* What__Where__How_MuchAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B28C0441372BF240062B9E1 /* What__Where__How_MuchAppDelegate.m */; };
-		3B28C0531372BF240062B9E1 /* What.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B28C0461372BF240062B9E1 /* What.m */; };
-		3B28C0541372BF240062B9E1 /* WhatDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B28C0481372BF240062B9E1 /* WhatDetailsController.m */; };
-		3B28C0551372BF240062B9E1 /* Where.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B28C04A1372BF240062B9E1 /* Where.m */; };
-		3B28C0561372BF240062B9E1 /* WhereDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B28C04C1372BF240062B9E1 /* WhereDetailsController.m */; };
-		3B28C0571372BF240062B9E1 /* WhereListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B28C04E1372BF240062B9E1 /* WhereListController.m */; };
 		3B28C0591372BF890062B9E1 /* WhereListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B28C0581372BF890062B9E1 /* WhereListController.xib */; };
 		3B28C0601372BFA60062B9E1 /* MapController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B28C05A1372BFA60062B9E1 /* MapController.xib */; };
 		3B28C0611372BFA60062B9E1 /* WhatDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B28C05C1372BFA60062B9E1 /* WhatDetailsController.xib */; };
@@ -35,6 +26,15 @@
 		3B2C92381367F62C00484A36 /* pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B2C92361367F62C00484A36 /* pin@2x.png */; };
 		3B2C923B136801E900484A36 /* empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B2C9239136801E900484A36 /* empty.png */; };
 		3B2C923C136801E900484A36 /* empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B2C923A136801E900484A36 /* empty@2x.png */; };
+		3B4644FB1372C482009D3008 /* MapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4644E81372C482009D3008 /* MapController.m */; };
+		3B4644FC1372C482009D3008 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4644EA1372C482009D3008 /* RootViewController.m */; };
+		3B4644FD1372C482009D3008 /* UserAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4644EC1372C482009D3008 /* UserAnnotation.m */; };
+		3B4644FF1372C482009D3008 /* What__Where__How_MuchAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4644F01372C482009D3008 /* What__Where__How_MuchAppDelegate.m */; };
+		3B4645001372C482009D3008 /* What.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4644F21372C482009D3008 /* What.m */; };
+		3B4645011372C482009D3008 /* WhatDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4644F41372C482009D3008 /* WhatDetailsController.m */; };
+		3B4645021372C482009D3008 /* Where.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4644F61372C482009D3008 /* Where.m */; };
+		3B4645031372C482009D3008 /* WhereDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4644F81372C482009D3008 /* WhereDetailsController.m */; };
+		3B4645041372C482009D3008 /* WhereListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4644FA1372C482009D3008 /* WhereListController.m */; };
 		3B6B071A132CEA73006D6E5E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B6B0719132CEA73006D6E5E /* Icon.png */; };
 		3B6B0722132CEB07006D6E5E /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B6B071F132CEB07006D6E5E /* Icon-72.png */; };
 		3B6B0723132CEB07006D6E5E /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B6B0720132CEB07006D6E5E /* Icon@2x.png */; };
@@ -62,24 +62,6 @@
 		28AD735F0D9D9599002E5188 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3B200C78132CBFC4001C7168 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		3B28C03D1372BF240062B9E1 /* MapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapController.h; path = Classes/MapController.h; sourceTree = "<group>"; };
-		3B28C03E1372BF240062B9E1 /* MapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapController.m; path = Classes/MapController.m; sourceTree = "<group>"; };
-		3B28C03F1372BF240062B9E1 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = Classes/RootViewController.h; sourceTree = "<group>"; };
-		3B28C0401372BF240062B9E1 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = Classes/RootViewController.m; sourceTree = "<group>"; };
-		3B28C0411372BF240062B9E1 /* UserAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserAnnotation.h; path = Classes/UserAnnotation.h; sourceTree = "<group>"; };
-		3B28C0421372BF240062B9E1 /* UserAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserAnnotation.m; path = Classes/UserAnnotation.m; sourceTree = "<group>"; };
-		3B28C0431372BF240062B9E1 /* What__Where__How_MuchAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = What__Where__How_MuchAppDelegate.h; path = Classes/What__Where__How_MuchAppDelegate.h; sourceTree = "<group>"; };
-		3B28C0441372BF240062B9E1 /* What__Where__How_MuchAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = What__Where__How_MuchAppDelegate.m; path = Classes/What__Where__How_MuchAppDelegate.m; sourceTree = "<group>"; };
-		3B28C0451372BF240062B9E1 /* What.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = What.h; path = Classes/What.h; sourceTree = "<group>"; };
-		3B28C0461372BF240062B9E1 /* What.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = What.m; path = Classes/What.m; sourceTree = "<group>"; };
-		3B28C0471372BF240062B9E1 /* WhatDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WhatDetailsController.h; path = Classes/WhatDetailsController.h; sourceTree = "<group>"; };
-		3B28C0481372BF240062B9E1 /* WhatDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WhatDetailsController.m; path = Classes/WhatDetailsController.m; sourceTree = "<group>"; };
-		3B28C0491372BF240062B9E1 /* Where.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Where.h; path = Classes/Where.h; sourceTree = "<group>"; };
-		3B28C04A1372BF240062B9E1 /* Where.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Where.m; path = Classes/Where.m; sourceTree = "<group>"; };
-		3B28C04B1372BF240062B9E1 /* WhereDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WhereDetailsController.h; path = Classes/WhereDetailsController.h; sourceTree = "<group>"; };
-		3B28C04C1372BF240062B9E1 /* WhereDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WhereDetailsController.m; path = Classes/WhereDetailsController.m; sourceTree = "<group>"; };
-		3B28C04D1372BF240062B9E1 /* WhereListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WhereListController.h; path = Classes/WhereListController.h; sourceTree = "<group>"; };
-		3B28C04E1372BF240062B9E1 /* WhereListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WhereListController.m; path = Classes/WhereListController.m; sourceTree = "<group>"; };
 		3B28C0581372BF890062B9E1 /* WhereListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhereListController.xib; sourceTree = "<group>"; };
 		3B28C05B1372BFA60062B9E1 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MapController.xib; sourceTree = "<group>"; };
 		3B28C05D1372BFA60062B9E1 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/WhatDetailsController.xib; sourceTree = "<group>"; };
@@ -91,6 +73,24 @@
 		3B2C92361367F62C00484A36 /* pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin@2x.png"; sourceTree = "<group>"; };
 		3B2C9239136801E900484A36 /* empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empty.png; sourceTree = "<group>"; };
 		3B2C923A136801E900484A36 /* empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "empty@2x.png"; sourceTree = "<group>"; };
+		3B4644E71372C482009D3008 /* MapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapController.h; sourceTree = "<group>"; };
+		3B4644E81372C482009D3008 /* MapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapController.m; sourceTree = "<group>"; };
+		3B4644E91372C482009D3008 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		3B4644EA1372C482009D3008 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		3B4644EB1372C482009D3008 /* UserAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAnnotation.h; sourceTree = "<group>"; };
+		3B4644EC1372C482009D3008 /* UserAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAnnotation.m; sourceTree = "<group>"; };
+		3B4644EF1372C482009D3008 /* What__Where__How_MuchAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = What__Where__How_MuchAppDelegate.h; sourceTree = "<group>"; };
+		3B4644F01372C482009D3008 /* What__Where__How_MuchAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = What__Where__How_MuchAppDelegate.m; sourceTree = "<group>"; };
+		3B4644F11372C482009D3008 /* What.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = What.h; sourceTree = "<group>"; };
+		3B4644F21372C482009D3008 /* What.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = What.m; sourceTree = "<group>"; };
+		3B4644F31372C482009D3008 /* WhatDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhatDetailsController.h; sourceTree = "<group>"; };
+		3B4644F41372C482009D3008 /* WhatDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhatDetailsController.m; sourceTree = "<group>"; };
+		3B4644F51372C482009D3008 /* Where.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Where.h; sourceTree = "<group>"; };
+		3B4644F61372C482009D3008 /* Where.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Where.m; sourceTree = "<group>"; };
+		3B4644F71372C482009D3008 /* WhereDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhereDetailsController.h; sourceTree = "<group>"; };
+		3B4644F81372C482009D3008 /* WhereDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhereDetailsController.m; sourceTree = "<group>"; };
+		3B4644F91372C482009D3008 /* WhereListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhereListController.h; sourceTree = "<group>"; };
+		3B4644FA1372C482009D3008 /* WhereListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhereListController.m; sourceTree = "<group>"; };
 		3B6B0719132CEA73006D6E5E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		3B6B071F132CEB07006D6E5E /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		3B6B0720132CEB07006D6E5E /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
@@ -130,24 +130,24 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3B28C03D1372BF240062B9E1 /* MapController.h */,
-				3B28C03E1372BF240062B9E1 /* MapController.m */,
-				3B28C03F1372BF240062B9E1 /* RootViewController.h */,
-				3B28C0401372BF240062B9E1 /* RootViewController.m */,
-				3B28C0411372BF240062B9E1 /* UserAnnotation.h */,
-				3B28C0421372BF240062B9E1 /* UserAnnotation.m */,
-				3B28C0431372BF240062B9E1 /* What__Where__How_MuchAppDelegate.h */,
-				3B28C0441372BF240062B9E1 /* What__Where__How_MuchAppDelegate.m */,
-				3B28C0451372BF240062B9E1 /* What.h */,
-				3B28C0461372BF240062B9E1 /* What.m */,
-				3B28C0471372BF240062B9E1 /* WhatDetailsController.h */,
-				3B28C0481372BF240062B9E1 /* WhatDetailsController.m */,
-				3B28C0491372BF240062B9E1 /* Where.h */,
-				3B28C04A1372BF240062B9E1 /* Where.m */,
-				3B28C04B1372BF240062B9E1 /* WhereDetailsController.h */,
-				3B28C04C1372BF240062B9E1 /* WhereDetailsController.m */,
-				3B28C04D1372BF240062B9E1 /* WhereListController.h */,
-				3B28C04E1372BF240062B9E1 /* WhereListController.m */,
+				3B4644E71372C482009D3008 /* MapController.h */,
+				3B4644E81372C482009D3008 /* MapController.m */,
+				3B4644E91372C482009D3008 /* RootViewController.h */,
+				3B4644EA1372C482009D3008 /* RootViewController.m */,
+				3B4644EB1372C482009D3008 /* UserAnnotation.h */,
+				3B4644EC1372C482009D3008 /* UserAnnotation.m */,
+				3B4644EF1372C482009D3008 /* What__Where__How_MuchAppDelegate.h */,
+				3B4644F01372C482009D3008 /* What__Where__How_MuchAppDelegate.m */,
+				3B4644F11372C482009D3008 /* What.h */,
+				3B4644F21372C482009D3008 /* What.m */,
+				3B4644F31372C482009D3008 /* WhatDetailsController.h */,
+				3B4644F41372C482009D3008 /* WhatDetailsController.m */,
+				3B4644F51372C482009D3008 /* Where.h */,
+				3B4644F61372C482009D3008 /* Where.m */,
+				3B4644F71372C482009D3008 /* WhereDetailsController.h */,
+				3B4644F81372C482009D3008 /* WhereDetailsController.m */,
+				3B4644F91372C482009D3008 /* WhereListController.h */,
+				3B4644FA1372C482009D3008 /* WhereListController.m */,
 			);
 			name = Classes;
 			path = "What and Where";
@@ -312,15 +312,15 @@
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				28D3F202112F7DC200FD0661 /* What__Where__How_Much.xcdatamodeld in Sources */,
-				3B28C04F1372BF240062B9E1 /* MapController.m in Sources */,
-				3B28C0501372BF240062B9E1 /* RootViewController.m in Sources */,
-				3B28C0511372BF240062B9E1 /* UserAnnotation.m in Sources */,
-				3B28C0521372BF240062B9E1 /* What__Where__How_MuchAppDelegate.m in Sources */,
-				3B28C0531372BF240062B9E1 /* What.m in Sources */,
-				3B28C0541372BF240062B9E1 /* WhatDetailsController.m in Sources */,
-				3B28C0551372BF240062B9E1 /* Where.m in Sources */,
-				3B28C0561372BF240062B9E1 /* WhereDetailsController.m in Sources */,
-				3B28C0571372BF240062B9E1 /* WhereListController.m in Sources */,
+				3B4644FB1372C482009D3008 /* MapController.m in Sources */,
+				3B4644FC1372C482009D3008 /* RootViewController.m in Sources */,
+				3B4644FD1372C482009D3008 /* UserAnnotation.m in Sources */,
+				3B4644FF1372C482009D3008 /* What__Where__How_MuchAppDelegate.m in Sources */,
+				3B4645001372C482009D3008 /* What.m in Sources */,
+				3B4645011372C482009D3008 /* WhatDetailsController.m in Sources */,
+				3B4645021372C482009D3008 /* Where.m in Sources */,
+				3B4645031372C482009D3008 /* WhereDetailsController.m in Sources */,
+				3B4645041372C482009D3008 /* WhereListController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
