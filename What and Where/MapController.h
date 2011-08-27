@@ -11,13 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "Where.h"
 
-@interface MapController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate> {
-    IBOutlet MKMapView *mapView;
-    IBOutlet UIButton *doneButton;
-    IBOutlet UIButton *saveButton;
-    IBOutlet UIButton *changeLocationButton;
-    IBOutlet UIButton *centerLocationButton;
-    
+@interface MapController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate> {    
     BOOL editMode;
     BOOL lsAvailable;
     Where *where;
@@ -27,10 +21,8 @@
 }
 
 @property(nonatomic, retain) IBOutlet MKMapView *mapView;
-@property(nonatomic, retain) IBOutlet UIButton *doneButton;
-@property(nonatomic, retain) IBOutlet UIButton *saveButton;
-@property(nonatomic, retain) IBOutlet UIButton *changeLocationButton;
-@property(nonatomic, retain) IBOutlet UIButton *centerLocationButton;
+@property(nonatomic, retain) IBOutlet UIToolbar *viewToolbar;
+@property(nonatomic, retain) IBOutlet UIToolbar *editToolbar;
 
 @property(nonatomic, assign) BOOL editMode;
 @property(nonatomic, assign) BOOL lsAvailable;

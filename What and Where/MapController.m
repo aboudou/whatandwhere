@@ -11,7 +11,7 @@
 
 @implementation MapController
 
-@synthesize mapView, doneButton, saveButton, changeLocationButton, centerLocationButton;
+@synthesize mapView, editToolbar, viewToolbar;
 @synthesize editMode, lsAvailable, where, locationManager, pinCoordinates, userCoordinates;
 
 #pragma mark -
@@ -70,13 +70,11 @@
     self.mapView.showsUserLocation = YES;
     
     if (editMode) {
-        saveButton.hidden = NO;
-        changeLocationButton.hidden = NO;
-        doneButton.hidden = YES;
+        editToolbar.hidden = NO;
+        viewToolbar.hidden = YES;
     } else {
-        saveButton.hidden = YES;
-        changeLocationButton.hidden = YES;
-        doneButton.hidden = NO;
+        editToolbar.hidden = YES;
+        viewToolbar.hidden = NO;
     }
 }
 
@@ -109,10 +107,8 @@
     [super dealloc];
     
     [mapView release];
-    [doneButton release];
-    [saveButton release];
-    [changeLocationButton release];
-    [centerLocationButton release];
+    [editToolbar release];
+    [viewToolbar release];
     
     [where release];
     [locationManager release];
