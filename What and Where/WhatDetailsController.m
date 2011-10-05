@@ -12,6 +12,7 @@
 #import "What.h"
 #import "Where.h"
 #import <QuartzCore/QuartzCore.h>
+#import "macros.h"
 
 
 @implementation WhatDetailsController
@@ -230,6 +231,9 @@
                                                                                             target:self action:@selector(cancel:)] autorelease];
 
     whatTextField.enabled = YES;
+    if (IOS_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.0")) {
+        whatTextField.backgroundColor = [UIColor whiteColor];
+    }
     whatTextField.borderStyle =  UITextBorderStyleRoundedRect;
     notesTextView.editable = YES;
     addPhotoButton.enabled = YES;
@@ -243,6 +247,7 @@
                                                                                             target:self action:@selector(switchEdit:)] autorelease];
     whatTextField.enabled = NO;
     whatTextField.borderStyle =  UITextBorderStyleNone;
+    whatTextField.backgroundColor = [UIColor clearColor];
 
     notesTextView.editable = NO;
     addPhotoButton.enabled = NO;

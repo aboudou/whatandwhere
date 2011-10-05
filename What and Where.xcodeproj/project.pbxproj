@@ -92,6 +92,7 @@
 		3B6B071F132CEB07006D6E5E /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		3B6B0720132CEB07006D6E5E /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		3B6B0721132CEB07006D6E5E /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = text; path = iTunesArtwork; sourceTree = "<group>"; };
+		3B94E22E143CA428003F58B4 /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
 		3B950453132CB12A00686AC0 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B950455132CB13800686AC0 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B95046B132CB44500686AC0 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -145,6 +146,7 @@
 				3B4644F81372C482009D3008 /* WhereDetailsController.m */,
 				3B4644F91372C482009D3008 /* WhereListController.h */,
 				3B4644FA1372C482009D3008 /* WhereListController.m */,
+				3B94E22E143CA428003F58B4 /* macros.h */,
 			);
 			name = Classes;
 			path = "What and Where";
@@ -392,6 +394,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "What and Where/What__Where__How_Much_Prefix.pch";
 				INFOPLIST_FILE = "What and Where/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "What and Where";
 				PROVISIONING_PROFILE = "";
 			};
@@ -406,6 +409,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "What and Where/What__Where__How_Much_Prefix.pch";
 				INFOPLIST_FILE = "What and Where/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "What and Where";
 				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;

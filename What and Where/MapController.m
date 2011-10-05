@@ -213,10 +213,9 @@
 
 
 -(MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation {
-    pinCoordinates.latitude = annotation.coordinate.latitude;
-    pinCoordinates.longitude = annotation.coordinate.longitude;
-    
     if ([annotation isKindOfClass:[UserAnnotation class]]) {
+        pinCoordinates.latitude = annotation.coordinate.latitude;
+        pinCoordinates.longitude = annotation.coordinate.longitude;
         
         MKPinAnnotationView *pinView = (MKPinAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier:@"MyCustomAnnotation"];
         

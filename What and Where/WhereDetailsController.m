@@ -8,6 +8,7 @@
 
 #import "WhereDetailsController.h"
 #import "MapController.h"
+#import "macros.h"
 
 
 @implementation WhereDetailsController
@@ -232,6 +233,10 @@
     
     priceTextField.borderStyle =  UITextBorderStyleRoundedRect;
     whereTextField.borderStyle =  UITextBorderStyleRoundedRect;
+    if (IOS_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.0")) {
+        priceTextField.backgroundColor = [UIColor whiteColor];
+        whereTextField.backgroundColor = [UIColor whiteColor];
+    }
     
     [locationButton setTitle:NSLocalizedString(@"Edit location", @"Location button on Where list controller in edit mode") forState:UIControlStateNormal];
     [locationButton setTitle:NSLocalizedString(@"Edit location", @"Location button on Where list controller in edit mode") forState:UIControlStateHighlighted];
