@@ -8,7 +8,7 @@
 
 #import "What__Where__How_MuchAppDelegate.h"
 #import "RootViewController.h"
-
+#import <CoreLocation/CoreLocation.h>
 
 @implementation What__Where__How_MuchAppDelegate
 
@@ -33,6 +33,21 @@
     // Add the navigation controller's view to the window and display.
     [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];
+
+
+    // Check for location service, and ask for it if not determined
+    if ([CLLocationManager respondsToSelector:@selector (authorizationStatus)]) {
+        if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
+            CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+            [locationManager startUpdatingLocation];
+            
+            [locationManager stopUpdatingLocation];
+            
+            locationManager.delegate = nil;
+            locationManager = nil;
+            [locationManager release];
+        }
+    }
 
     return YES;
 }
