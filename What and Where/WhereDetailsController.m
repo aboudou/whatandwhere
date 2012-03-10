@@ -203,9 +203,6 @@
                                                                                            target:self action:@selector(save:)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
                                                                                             target:self action:@selector(cancel:)];
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.3];
-    
     editMode = YES;
     whereTextField.enabled = YES;
     notesTextView.editable = YES;
@@ -215,17 +212,15 @@
     currencyLabel.hidden = NO;
     recapLabel.hidden = YES;
     
-    priceTextField.borderStyle =  UITextBorderStyleRoundedRect;
-    whereTextField.borderStyle =  UITextBorderStyleRoundedRect;
     if (IOS_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.0")) {
         priceTextField.backgroundColor = [UIColor whiteColor];
         whereTextField.backgroundColor = [UIColor whiteColor];
     }
-    
+    priceTextField.borderStyle =  UITextBorderStyleRoundedRect;
+    whereTextField.borderStyle =  UITextBorderStyleRoundedRect;
+
     [locationButton setTitle:NSLocalizedString(@"Edit location", @"Location button on Where list controller in edit mode") forState:UIControlStateNormal];
     [locationButton setTitle:NSLocalizedString(@"Edit location", @"Location button on Where list controller in edit mode") forState:UIControlStateHighlighted];
-    
-    [UIView commitAnimations];
 }
 
 -(void) setNonEditableView {
