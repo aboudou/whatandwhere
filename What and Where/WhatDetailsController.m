@@ -17,9 +17,10 @@
 
 @implementation WhatDetailsController
 
-@synthesize scrollView, imageView, addPhotoButton, whatTextField, notesTextView, whereButton, cheapest;
-@synthesize keyboardVisible, addMode, what;
+@synthesize scrollView, imageBg, imageView, whatTextField, notesTextView, whereButton, cheapest;
+@synthesize imageRect, imageResized, keyboardVisible, addMode, what;
 @synthesize managedObjectContext = managedObjectContext_;
+@synthesize tapGesture;
 
 #pragma mark -
 #pragma mark controller/view lifecycle
@@ -29,9 +30,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    imageView.layer.cornerRadius = 9.0;
-    imageView.layer.masksToBounds = YES;
-    
     self.title = what.whatName;
 
     if (addMode == YES) {
@@ -44,6 +42,9 @@
     notesTextView.text = what.whatNotes;
     
     scrollView.contentSize = self.view.frame.size;
+    
+    tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addPhotoButtonClicked:)];
+    [imageBg addGestureRecognizer:tapGesture];
     
 }
  
@@ -73,7 +74,13 @@
         cheapest.text = @"";
     }
     
-
+    imageView.layer.cornerRadius = 9.0;
+    imageView.layer.masksToBounds = YES;
+    imageBg.layer.cornerRadius = 9.0;
+    imageBg.layer.masksToBounds = YES;
+    
+    imageRect = imageView.frame;
+    imageResized = NO;
     
     keyboardVisible = NO;
 }
@@ -101,24 +108,69 @@
 #pragma mark UI management functions
 
 -(IBAction) addPhotoButtonClicked:(id)sender {
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        // Un appareil photo est disponible, on laisse le choix de la source
-        UIActionSheet *photoSourceSheet = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"Add a photo", @"Title for photo source sheet") 
-                                                                      delegate:self 
-                                                             cancelButtonTitle:NSLocalizedString(@"Cancel", @"Cancel button on photo source sheet") 
-                                                        destructiveButtonTitle:nil 
-                                                             otherButtonTitles:NSLocalizedString(@"Take new photo", "Photo from camera button on photo source sheet"), 
-                                                                               NSLocalizedString(@"Choose existing photo", "Photo from library on photo source sheet"), 
-                                                                               nil, nil];
-        [photoSourceSheet showInView:self.view];
+    if (whatTextField.enabled) {
+        if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+            // Un appareil photo est disponible, on laisse le choix de la source
+            UIActionSheet *photoSourceSheet = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"Add a photo", @"Title for photo source sheet") 
+                                                                          delegate:self 
+                                                                 cancelButtonTitle:NSLocalizedString(@"Cancel", @"Cancel button on photo source sheet") 
+                                                            destructiveButtonTitle:nil 
+                                                                 otherButtonTitles:NSLocalizedString(@"Take new photo", "Photo from camera button on photo source sheet"), 
+                                                                                   NSLocalizedString(@"Choose existing photo", "Photo from library on photo source sheet"), 
+                                                                                   nil, nil];
+            [photoSourceSheet showInView:self.view];
+        } else {
+            // Pas d'appareil photo, on va directement dans la bibliothèque d'images
+            
+            UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+            picker.delegate = self;
+            picker.allowsEditing = YES;
+            
+            [self presentModalViewController:picker animated:YES];
+        }
     } else {
-        // Pas d'appareil photo, on va directement dans la bibliothèque d'images
-        
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-        picker.delegate = self;
-        picker.allowsEditing = YES;
-        
-        [self presentModalViewController:picker animated:YES];
+        if ([imageView image] != nil) {
+            if (!imageResized) {
+                [UIView beginAnimations:nil context:NULL];
+                [UIView setAnimationDuration:0.3];
+                
+                imageView.layer.cornerRadius = 0.0;
+                imageView.layer.masksToBounds = NO;
+                imageBg.layer.cornerRadius = 0.0;
+                imageBg.layer.masksToBounds = NO;
+
+                [[self navigationController] setNavigationBarHidden:YES animated:YES];
+                [imageView setFrame:CGRectMake(0, 70, 320, 320)];
+                [imageBg setFrame:CGRectMake(0, 0, 320, 460)];
+                [imageBg setBackgroundColor:[UIColor blackColor]];
+
+                imageResized = YES;
+                
+                [UIView commitAnimations];
+
+                [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:YES];
+
+            } else {
+                [UIView beginAnimations:nil context:NULL];
+                [UIView setAnimationDuration:0.3];
+                
+                imageView.layer.cornerRadius = 9.0;
+                imageView.layer.masksToBounds = YES;
+                imageBg.layer.cornerRadius = 9.0;
+                imageBg.layer.masksToBounds = YES;
+                
+                [[self navigationController] setNavigationBarHidden:NO animated:YES];
+                [imageView setFrame:imageRect];
+                [imageBg setFrame:imageRect];
+                [imageBg setBackgroundColor:[UIColor whiteColor]];
+
+                imageResized = NO;
+                
+                [UIView commitAnimations];
+
+                [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+            }
+        }
     }
 }
 
@@ -216,7 +268,6 @@
     }
     whatTextField.borderStyle =  UITextBorderStyleRoundedRect;
     notesTextView.editable = YES;
-    addPhotoButton.enabled = YES;
     whereButton.enabled = NO;
     whereButton.hidden = YES;
 }
@@ -230,7 +281,6 @@
     whatTextField.backgroundColor = [UIColor clearColor];
 
     notesTextView.editable = NO;
-    addPhotoButton.enabled = NO;
     whereButton.enabled = YES;
     whereButton.hidden = NO;
 }

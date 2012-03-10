@@ -14,18 +14,22 @@
 }
 
 @property(nonatomic, strong) IBOutlet UIScrollView *scrollView;
+@property(nonatomic, strong) IBOutlet UIView *imageBg;
 @property(nonatomic, strong) IBOutlet UIImageView *imageView;
-@property(nonatomic, strong) IBOutlet UIButton *addPhotoButton;
 @property(nonatomic, strong) IBOutlet UITextField *whatTextField;
 @property(nonatomic, strong) IBOutlet UITextView *notesTextView;
 @property(nonatomic, strong) IBOutlet UIButton *whereButton;
 @property(nonatomic, strong) IBOutlet UILabel *cheapest;
 
+@property(nonatomic, assign) BOOL imageResized;
+@property(nonatomic, assign) CGRect imageRect;
 @property(nonatomic, assign) BOOL keyboardVisible;
 @property(nonatomic, assign) BOOL addMode;
 @property(nonatomic, strong) What *what;
 
 @property(nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+
+@property(nonatomic, strong) UITapGestureRecognizer *tapGesture;
 
 -(IBAction) addPhotoButtonClicked:(id)sender;
 -(IBAction) whereButtonClicked:(id)sender;

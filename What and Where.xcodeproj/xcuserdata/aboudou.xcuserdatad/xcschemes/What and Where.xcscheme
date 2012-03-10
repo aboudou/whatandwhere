@@ -17,7 +17,7 @@
                BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
                BuildableName = "What and Where.app"
                BlueprintName = "What and Where"
-               ReferencedContainer = "container:../../../../Documents/XCode/iOS/What and Where/What and Where.xcodeproj">
+               ReferencedContainer = "container:What and Where.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,7 +32,7 @@
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       displayScaleIsEnabled = "NO"
       displayScale = "1.00"
       launchStyle = "0"
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "What and Where.app"
             BlueprintName = "What and Where"
-            ReferencedContainer = "container:../../../../Documents/XCode/iOS/What and Where/What and Where.xcodeproj">
+            ReferencedContainer = "container:What and Where.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -74,7 +74,7 @@
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "What and Where.app"
             BlueprintName = "What and Where"
-            ReferencedContainer = "container:../../../../Documents/XCode/iOS/What and Where/What and Where.xcodeproj">
+            ReferencedContainer = "container:What and Where.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
