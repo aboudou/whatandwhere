@@ -20,7 +20,9 @@
 
 @implementation RootViewController
 
-@synthesize fetchedResultsController=fetchedResultsController_, managedObjectContext=managedObjectContext_, addingManagedObjectContext = addingManagedObjectContext_;
+@synthesize fetchedResultsController = fetchedResultsController_;
+@synthesize managedObjectContext = managedObjectContext_;
+@synthesize addingManagedObjectContext = addingManagedObjectContext_;
 
 
 #pragma mark -
@@ -34,7 +36,6 @@
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
     self.navigationItem.rightBarButtonItem = addButton;
-    [addButton release];
     
 }
 
@@ -55,7 +56,7 @@
     cell.detailTextLabel.text = selectedObject.whatNotes;
     
     if (selectedObject.whatPhoto != nil) {
-        cell.imageView.image = [[[UIImage alloc] initWithData:selectedObject.whatPhoto] autorelease];
+        cell.imageView.image = [[UIImage alloc] initWithData:selectedObject.whatPhoto];
         cell.imageView.layer.cornerRadius = 9.0;
         cell.imageView.layer.masksToBounds = YES;
     } else {
@@ -92,7 +93,6 @@
     whatDetailViewController.managedObjectContext = self.managedObjectContext;
     
     [self.navigationController pushViewController:whatDetailViewController animated:YES];
-    [whatDetailViewController release];
 }
 
 
@@ -125,7 +125,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
 //        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
     // Configure the cell.
@@ -178,7 +178,6 @@
 
     // Pass the selected object to the new view controller.
     [self.navigationController pushViewController:whatDetailViewController animated:YES];
-    [whatDetailViewController release];
 }
 
 
@@ -215,10 +214,6 @@
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;
     
-    [aFetchedResultsController release];
-    [fetchRequest release];
-    [sortDescriptor release];
-    [sortDescriptors release];
     
     NSError *error = nil;
     if (![fetchedResultsController_ performFetch:&error]) {
@@ -309,13 +304,6 @@
 }
 
 
-- (void)dealloc {
-    [fetchedResultsController_ release];
-    [managedObjectContext_ release];
-    [addingManagedObjectContext_ release];
-    
-    [super dealloc];
-}
 
 
 @end

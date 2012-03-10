@@ -11,35 +11,21 @@
 
 
 @interface WhatDetailsController : UIViewController <UINavigationControllerDelegate , UIImagePickerControllerDelegate, UIActionSheetDelegate> {
-    IBOutlet UIScrollView *scrollView;
-    IBOutlet UIImageView *imageView;
-    IBOutlet UIButton *addPhotoButton;
-    IBOutlet UITextField *whatTextField;
-    IBOutlet UITextView *notesTextView;
-    IBOutlet UIButton *whereButton;
-    IBOutlet UILabel *cheapest;
-
-    BOOL keyboardVisible;
-    BOOL addMode;
-    What *what;
-    
-@private
-    NSManagedObjectContext *managedObjectContext_;
 }
 
-@property(nonatomic, retain) IBOutlet UIScrollView *scrollView;
-@property(nonatomic, retain) IBOutlet UIImageView *imageView;
-@property(nonatomic, retain) IBOutlet UIButton *addPhotoButton;
-@property(nonatomic, retain) IBOutlet UITextField *whatTextField;
-@property(nonatomic, retain) IBOutlet UITextView *notesTextView;
-@property(nonatomic, retain) IBOutlet UIButton *whereButton;
-@property(nonatomic, retain) IBOutlet UILabel *cheapest;
+@property(nonatomic, strong) IBOutlet UIScrollView *scrollView;
+@property(nonatomic, strong) IBOutlet UIImageView *imageView;
+@property(nonatomic, strong) IBOutlet UIButton *addPhotoButton;
+@property(nonatomic, strong) IBOutlet UITextField *whatTextField;
+@property(nonatomic, strong) IBOutlet UITextView *notesTextView;
+@property(nonatomic, strong) IBOutlet UIButton *whereButton;
+@property(nonatomic, strong) IBOutlet UILabel *cheapest;
 
 @property(nonatomic, assign) BOOL keyboardVisible;
 @property(nonatomic, assign) BOOL addMode;
-@property(nonatomic, retain) What *what;
+@property(nonatomic, strong) What *what;
 
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property(nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 -(IBAction) addPhotoButtonClicked:(id)sender;
 -(IBAction) whereButtonClicked:(id)sender;

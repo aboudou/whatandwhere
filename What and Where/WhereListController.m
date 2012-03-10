@@ -15,7 +15,9 @@
 @implementation WhereListController
 
 @synthesize what;
-@synthesize fetchedResultsController=fetchedResultsController_, managedObjectContext=managedObjectContext_, addingManagedObjectContext = addingManagedObjectContext_;
+@synthesize fetchedResultsController = fetchedResultsController_;
+@synthesize managedObjectContext = managedObjectContext_;
+@synthesize addingManagedObjectContext = addingManagedObjectContext_;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -57,7 +59,6 @@
         cell.imageView.image = [UIImage imageNamed:@"empty"];
     }
     
-    [f release];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -77,7 +78,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
     // Configure the cell.
@@ -131,7 +132,6 @@
     
     // Pass the selected object to the new view controller.
     [self.navigationController pushViewController:whereDetailViewController animated:YES];
-    [whereDetailViewController release];
 }
 
 
@@ -151,14 +151,6 @@
 }
 
 
-- (void)dealloc {
-    [what release];
-    [fetchedResultsController_ release];
-    [managedObjectContext_ release];
-    [addingManagedObjectContext_ release];
-        
-    [super dealloc];
-}
 
 #pragma mark -
 #pragma mark Add a new object
@@ -186,7 +178,6 @@
     whereDetailViewController.addMode = YES;
     
     [self.navigationController pushViewController:whereDetailViewController animated:YES];
-    [whereDetailViewController release];
 }
 
 
@@ -236,10 +227,6 @@
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;
     
-    [aFetchedResultsController release];
-    [fetchRequest release];
-    [sortDescriptor release];
-    [sortDescriptors release];
     
     NSError *error = nil;
     if (![fetchedResultsController_ performFetch:&error]) {
@@ -337,7 +324,6 @@
 - (void) setEditMode {
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(editDone)];
     self.navigationItem.rightBarButtonItem = addButton;
-    [addButton release];
 }
 
 - (void) exitEditMode {
@@ -354,8 +340,6 @@
 	UIBarButtonItem *segBarItem = [[UIBarButtonItem alloc] initWithCustomView:segControl];
 	self.navigationItem.rightBarButtonItem = segBarItem;
     
-	[segControl release];
-	[segBarItem release];
 }
 
 @end

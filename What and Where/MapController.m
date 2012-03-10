@@ -103,16 +103,6 @@
 }
 
 
-- (void)dealloc {
-    [super dealloc];
-    
-    [mapView release];
-    [editToolbar release];
-    [viewToolbar release];
-    
-    [where release];
-    [locationManager release];
-}
 
 #pragma mark -
 #pragma mark UI management methods
@@ -139,7 +129,6 @@
     pinCoordinates.latitude = userAnno.coordinate.latitude;
     pinCoordinates.longitude = userAnno.coordinate.longitude;
     
-    [userAnno release];
 }
 
 -(IBAction) centerLocationButtonPressed:(id)sender {
@@ -161,7 +150,6 @@
                                               cancelButtonTitle:@"OK" 
                                               otherButtonTitles:nil];
         [alert show];
-        [alert release];
     }
 }
 
@@ -192,7 +180,6 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"Error") message:NSLocalizedString(@"The current location could not be obtained.", @"Message for localisation error") delegate:self
                                               cancelButtonTitle:NSLocalizedString(@"Dismiss", @"Dismiss") otherButtonTitles:nil];
     [alert show];
-    [alert release];
 }
 
 
@@ -220,8 +207,8 @@
         MKPinAnnotationView *pinView = (MKPinAnnotationView *) [mapView dequeueReusableAnnotationViewWithIdentifier:@"MyCustomAnnotation"];
         
         if (!pinView) {
-            pinView = [[[MKPinAnnotationView alloc] initWithAnnotation:annotation
-                                                       reuseIdentifier:@"MyCustomAnnotation"] autorelease];
+            pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation
+                                                       reuseIdentifier:@"MyCustomAnnotation"];
             pinView.draggable = YES;
             pinView.pinColor = MKPinAnnotationColorPurple;
             pinView.animatesDrop = YES;

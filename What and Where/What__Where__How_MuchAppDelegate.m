@@ -14,6 +14,9 @@
 
 @synthesize window;
 @synthesize navigationController;
+@synthesize managedObjectContext = managedObjectContext_;
+@synthesize managedObjectModel = managedObjectModel_;
+@synthesize persistentStoreCoordinator = persistentStoreCoordinator_;
 
 
 #pragma mark -
@@ -45,7 +48,6 @@
             
             locationManager.delegate = nil;
             locationManager = nil;
-            [locationManager release];
         }
     }
 
@@ -215,16 +217,6 @@
 }
 
 
-- (void)dealloc {
-    
-    [managedObjectContext_ release];
-    [managedObjectModel_ release];
-    [persistentStoreCoordinator_ release];
-    
-    [navigationController release];
-    [window release];
-    [super dealloc];
-}
 
 
 @end

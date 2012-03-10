@@ -10,14 +10,13 @@
 
 @class Where;
 
-@interface What :  NSManagedObject  
-{
+@interface What :  NSManagedObject {
 }
 
-@property (nonatomic, retain) NSData * whatPhoto;
-@property (nonatomic, retain) NSString * whatName;
-@property (nonatomic, retain) NSString * whatNotes;
-@property (nonatomic, retain) NSSet* wheres;
+@property (nonatomic, strong) NSData * whatPhoto;
+@property (nonatomic, strong) NSString * whatName;
+@property (nonatomic, strong) NSString * whatNotes;
+@property (nonatomic, strong) NSSet* wheres;
 
 @end
 

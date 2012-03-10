@@ -47,7 +47,6 @@
     
     NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
     currencyLabel.text = [f currencySymbol];
-    [f release];
     
     scrollView.contentSize = self.view.frame.size;
     
@@ -94,19 +93,6 @@
 }
 
 
-- (void)dealloc {
-    [scrollView release];
-    [whereTextField release];
-    [priceTextField release];
-    [currencyLabel release];
-    [notesTextView release];
-    [locationButton release];
-    [recapLabel release];
-    
-    [where release];
-    
-    [super dealloc];
-}
 
 #pragma mark -
 #pragma mark UI management functions
@@ -119,7 +105,6 @@
     controller.editMode = editMode;
     
     [self.navigationController presentModalViewController:controller animated:YES];
-    [controller release];
 }
 
 - (IBAction)switchEdit:(id)sender {
@@ -154,7 +139,6 @@
         
         self.where.wherePrice = [f numberFromString:priceTextField.text];
         
-        [f release];
         
         // Save new coordinates
         where.whereLatitude = [NSNumber numberWithDouble:whereLatNew];
@@ -215,10 +199,10 @@
 #pragma mark Local functions
 
 -(void) setEditableView {
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
-                                                                                           target:self action:@selector(save:)] autorelease];
-    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
-                                                                                            target:self action:@selector(cancel:)] autorelease];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+                                                                                           target:self action:@selector(save:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
+                                                                                            target:self action:@selector(cancel:)];
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.3];
     
@@ -246,8 +230,8 @@
 
 -(void) setNonEditableView {
     self.navigationItem.leftBarButtonItem = nil;
-    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit 
-                                                                                            target:self action:@selector(switchEdit:)] autorelease];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit 
+                                                                                            target:self action:@selector(switchEdit:)];
     editMode = NO;
     whereTextField.enabled = NO;
     notesTextView.editable = NO;
@@ -267,7 +251,6 @@
 -(void) setRecapLabelText {
     NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
     recapLabel.text = [NSString localizedStringWithFormat:@"%@ (%1.3f %@)", where.whereName, [where.wherePrice floatValue], [f currencySymbol]];
-    [f release];
 }    
 
 @end

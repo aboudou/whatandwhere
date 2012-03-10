@@ -11,20 +11,13 @@
 #import "What.h"
 
 @interface WhereListController : UITableViewController <NSFetchedResultsControllerDelegate> {
-    What *what;
-    
-@private
-    NSFetchedResultsController *fetchedResultsController_;
-    NSManagedObjectContext *managedObjectContext_;
-    NSManagedObjectContext *addingManagedObjectContext_;
 }
 
-@property(nonatomic, retain) What *what;
+@property (nonatomic, strong) What *what;
 
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic, retain) NSManagedObjectContext *addingManagedObjectContext;
-
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSManagedObjectContext *addingManagedObjectContext;
 
 - (void)segAction:(id)sender;
 - (void)editDone;

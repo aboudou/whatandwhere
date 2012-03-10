@@ -19,7 +19,7 @@
 
 @synthesize scrollView, imageView, addPhotoButton, whatTextField, notesTextView, whereButton, cheapest;
 @synthesize keyboardVisible, addMode, what;
-@synthesize managedObjectContext=managedObjectContext_;
+@synthesize managedObjectContext = managedObjectContext_;
 
 #pragma mark -
 #pragma mark controller/view lifecycle
@@ -53,7 +53,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
     
-    self.imageView.image = [[[UIImage alloc] initWithData:what.whatPhoto] autorelease];
+    self.imageView.image = [[UIImage alloc] initWithData:what.whatPhoto];
 
     
     // Get cheaper price
@@ -69,13 +69,10 @@
          [[[wheres objectAtIndex:0] wherePrice] floatValue],
          [f currencySymbol]];
         
-        [f release];
     } else {
         cheapest.text = @"";
     }
     
-    [sortDescriptors release];
-    [sortDescriptor release];
 
     
     keyboardVisible = NO;
@@ -99,21 +96,6 @@
     // e.g. self.myOutlet = nil;
 }
 
-- (void)dealloc {
-    [scrollView release];
-    [imageView release];
-    [addPhotoButton release];
-    [whatTextField release];
-    [notesTextView release];
-    [whereButton release];
-    [cheapest release];
-    
-    [what release];
-    
-    [managedObjectContext_ release];
-    
-    [super dealloc];
-}
 
 #pragma mark -
 #pragma mark UI management functions
@@ -129,7 +111,6 @@
                                                                                NSLocalizedString(@"Choose existing photo", "Photo from library on photo source sheet"), 
                                                                                nil, nil];
         [photoSourceSheet showInView:self.view];
-        [photoSourceSheet release];
     } else {
         // Pas d'appareil photo, on va directement dans la bibliothèque d'images
         
@@ -149,7 +130,6 @@
     
     // Pass the selected object to the new view controller.
     [self.navigationController pushViewController:whereListController animated:YES];
-    [whereListController release];
     
 }
 
@@ -225,10 +205,10 @@
 #pragma mark local functions
 
 -(void) setEditableView {
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
-                                                                                           target:self action:@selector(save:)] autorelease];
-    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
-                                                                                            target:self action:@selector(cancel:)] autorelease];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+                                                                                           target:self action:@selector(save:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
+                                                                                            target:self action:@selector(cancel:)];
 
     whatTextField.enabled = YES;
     if (IOS_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.0")) {
@@ -243,8 +223,8 @@
 
 -(void) setNonEditableView {
     self.navigationItem.leftBarButtonItem = nil;
-    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit 
-                                                                                            target:self action:@selector(switchEdit:)] autorelease];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit 
+                                                                                            target:self action:@selector(switchEdit:)];
     whatTextField.enabled = NO;
     whatTextField.borderStyle =  UITextBorderStyleNone;
     whatTextField.backgroundColor = [UIColor clearColor];
@@ -264,7 +244,6 @@
     self.what.whatPhoto = UIImagePNGRepresentation(image);
     
     [self dismissModalViewControllerAnimated:YES];
-    [picker release];
 }
 
 #pragma mark -
@@ -283,7 +262,6 @@
             picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
             break;
         default:
-            [picker release];
             return;
     }
     

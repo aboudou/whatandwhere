@@ -11,15 +11,10 @@
 #import "What.h"
 
 @interface RootViewController : UITableViewController <NSFetchedResultsControllerDelegate> {
-
-@private
-    NSFetchedResultsController *fetchedResultsController_;
-    NSManagedObjectContext *managedObjectContext_;
-    NSManagedObjectContext *addingManagedObjectContext_;
 }
 
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic, retain) NSManagedObjectContext *addingManagedObjectContext;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSManagedObjectContext *addingManagedObjectContext;
 
 @end

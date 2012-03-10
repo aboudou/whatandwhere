@@ -11,39 +11,20 @@
 
 
 @interface WhereDetailsController : UIViewController {
-    
-    IBOutlet UIScrollView *scrollView;
-    IBOutlet UITextField *whereTextField;
-    IBOutlet UITextField *priceTextField;
-    IBOutlet UILabel *currencyLabel;
-    IBOutlet UITextView *notesTextView;
-    IBOutlet UIButton *locationButton;
-    IBOutlet UILabel *recapLabel;
-    
-    BOOL keyboardVisible;
-    BOOL addMode;
-    BOOL editMode;
-    Where *where;
-    
-    double whereLatOld;
-    double whereLonOld;
-    double whereLatNew;
-    double whereLonNew;
-    
 }
 
-@property(nonatomic, retain) IBOutlet UIScrollView *scrollView;
-@property(nonatomic, retain) IBOutlet UITextField *whereTextField;
-@property(nonatomic, retain) IBOutlet UITextField *priceTextField;
-@property(nonatomic, retain) IBOutlet UILabel *currencyLabel;
-@property(nonatomic, retain) IBOutlet UITextView *notesTextView;
-@property(nonatomic, retain) IBOutlet UIButton *locationButton;
-@property(nonatomic, retain) IBOutlet UILabel *recapLabel;
+@property(nonatomic, strong) IBOutlet UIScrollView *scrollView;
+@property(nonatomic, strong) IBOutlet UITextField *whereTextField;
+@property(nonatomic, strong) IBOutlet UITextField *priceTextField;
+@property(nonatomic, strong) IBOutlet UILabel *currencyLabel;
+@property(nonatomic, strong) IBOutlet UITextView *notesTextView;
+@property(nonatomic, strong) IBOutlet UIButton *locationButton;
+@property(nonatomic, strong) IBOutlet UILabel *recapLabel;
 
 @property(nonatomic, assign) BOOL keyboardVisible;
 @property(nonatomic, assign) BOOL addMode;
 @property(nonatomic, assign) BOOL editMode;
-@property(nonatomic, retain) Where *where;
+@property(nonatomic, strong) Where *where;
 
 // Original Where coordinates in case of edit cancel
 @property(nonatomic, assign) double whereLatOld;

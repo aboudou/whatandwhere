@@ -11,19 +11,17 @@
 
 @class What;
 
-@interface Where :  NSManagedObject <MKAnnotation>
-{
+@interface Where :  NSManagedObject <MKAnnotation> {
 }
 
-@property (nonatomic, retain) NSNumber * wherePrice;
-@property (nonatomic, retain) NSString * whereNotes;
-@property (nonatomic, retain) NSString * whereName;
-@property (nonatomic, retain) NSNumber * whereLongitude;
-@property (nonatomic, retain) NSNumber * whereLatitude;
-@property (nonatomic, retain) What * what;
-
-
+@property (nonatomic, strong) NSNumber * wherePrice;
+@property (nonatomic, strong) NSString * whereNotes;
+@property (nonatomic, strong) NSString * whereName;
+@property (nonatomic, strong) NSNumber * whereLongitude;
+@property (nonatomic, strong) NSNumber * whereLatitude;
+@property (nonatomic, strong) What * what;
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+
 - (NSString *) title;
 - (NSString *) subtitle;
 
