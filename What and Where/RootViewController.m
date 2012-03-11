@@ -45,6 +45,9 @@
     [super viewWillAppear:animated];
     
     [self.tableView reloadData];
+    
+    // Localisation interface
+    [self.navigationItem setTitle:NSLocalizedString(@"What ?", @"")];
 }
 
 
@@ -79,7 +82,7 @@
     What *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
     // If appropriate, configure the new managed object.
-    [newManagedObject setValue:NSLocalizedString(@"What ?", @"Default name for What object") forKey:@"whatName"];
+    [newManagedObject setValue:NSLocalizedString(@"What ?", @"") forKey:@"whatName"];
     
     // Save the context.
     NSError *error = nil;

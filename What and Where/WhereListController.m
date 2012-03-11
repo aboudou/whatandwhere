@@ -27,7 +27,7 @@
     
     [self exitEditMode];
     
-    self.navigationItem.title = NSLocalizedString(@"Where ?", @"Navigation title on Where list controller");
+    self.navigationItem.title = NSLocalizedString(@"Where ?", @"");
     
 }
 
@@ -164,7 +164,7 @@
     Where *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
     // If appropriate, configure the new managed object.
-    [newManagedObject setValue:NSLocalizedString(@"Where ?", @"Default name for Where object") forKey:@"whereName"];
+    [newManagedObject setValue:NSLocalizedString(@"Where ?", @"") forKey:@"whereName"];
     [newManagedObject setValue:what forKey:@"what"];
     
     // Save the context.
@@ -329,8 +329,8 @@
 - (void) exitEditMode {
     // Set up the edit and add buttons.
     UISegmentedControl *segControl = [[UISegmentedControl alloc]
-                                      initWithItems:[NSArray arrayWithObjects:NSLocalizedString(@"Edit", @"Edit button on Where list controller"),
-                                                                              NSLocalizedString(@"Add", @"Add button on Where list controller"),
+                                      initWithItems:[NSArray arrayWithObjects:NSLocalizedString(@"Edit", @""),
+                                                                              NSLocalizedString(@"Add", @""),
                                                                               nil]];
     
 	segControl.segmentedControlStyle = UISegmentedControlStyleBar;

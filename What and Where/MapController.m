@@ -12,6 +12,7 @@
 @implementation MapController
 
 @synthesize mapView, editToolbar, viewToolbar;
+@synthesize centerLocationButton, changeLocationButton, saveLocationButton, doneButton;
 @synthesize editMode, lsAvailable, where, locationManager, pinCoordinates, userCoordinates;
 
 #pragma mark -
@@ -76,6 +77,11 @@
         editToolbar.hidden = YES;
         viewToolbar.hidden = NO;
     }
+    
+    // Localisation interface
+    [changeLocationButton setTitle:NSLocalizedString(@"Drop pin", @"")];
+    [saveLocationButton setTitle:NSLocalizedString(@"Save location", @"")];
+    [doneButton setTitle:NSLocalizedString(@"Done", @"")];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -144,8 +150,8 @@
         
         [UIView commitAnimations];
     } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"LocDisabled", @"Title for localisation disabled") 
-                                                        message:NSLocalizedString(@"LocDisabledMsg", @"Message for localisation disabled") 
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"LocDisabled", @"") 
+                                                        message:NSLocalizedString(@"LocDisabledMsg", @"") 
                                                        delegate:nil 
                                               cancelButtonTitle:@"OK" 
                                               otherButtonTitles:nil];
@@ -177,8 +183,8 @@
 -(void) locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     NSLog(@"toto");
     NSLog(@"Error %@ %@", error, [error userInfo]);
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"Error") message:NSLocalizedString(@"The current location could not be obtained.", @"Message for localisation error") delegate:self
-                                              cancelButtonTitle:NSLocalizedString(@"Dismiss", @"Dismiss") otherButtonTitles:nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"") message:NSLocalizedString(@"The current location could not be obtained.", @"") delegate:self
+                                              cancelButtonTitle:NSLocalizedString(@"Dismiss", @"") otherButtonTitles:nil];
     [alert show];
 }
 

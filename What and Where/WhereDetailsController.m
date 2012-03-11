@@ -55,6 +55,7 @@
     } else {
         [self setNonEditableView];
     }
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -73,6 +74,10 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
     keyboardVisible = NO;
+    
+    // Localisation interface
+    [whereTextField setPlaceholder:NSLocalizedString(@"Where ?", @"")];
+    [priceTextField setPlaceholder:NSLocalizedString(@"How much ?", @"")];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -219,8 +224,8 @@
     priceTextField.borderStyle =  UITextBorderStyleRoundedRect;
     whereTextField.borderStyle =  UITextBorderStyleRoundedRect;
 
-    [locationButton setTitle:NSLocalizedString(@"Edit location", @"Location button on Where list controller in edit mode") forState:UIControlStateNormal];
-    [locationButton setTitle:NSLocalizedString(@"Edit location", @"Location button on Where list controller in edit mode") forState:UIControlStateHighlighted];
+    [locationButton setTitle:NSLocalizedString(@"Edit location", @"") forState:UIControlStateNormal];
+    [locationButton setTitle:NSLocalizedString(@"Edit location", @"") forState:UIControlStateHighlighted];
 }
 
 -(void) setNonEditableView {
@@ -239,8 +244,8 @@
     priceTextField.borderStyle =  UITextBorderStyleNone;
     whereTextField.borderStyle =  UITextBorderStyleNone;
     
-    [locationButton setTitle:NSLocalizedString(@"View location", @"Location button on Where list controller in view mode") forState:UIControlStateNormal];
-    [locationButton setTitle:NSLocalizedString(@"View location", @"Location button on Where list controller in view mode") forState:UIControlStateHighlighted];
+    [locationButton setTitle:NSLocalizedString(@"View location", @"") forState:UIControlStateNormal];
+    [locationButton setTitle:NSLocalizedString(@"View location", @"") forState:UIControlStateHighlighted];
 }
 
 -(void) setRecapLabelText {

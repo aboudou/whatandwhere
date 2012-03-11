@@ -18,6 +18,11 @@
 @property(nonatomic, strong) IBOutlet UIToolbar *viewToolbar;
 @property(nonatomic, strong) IBOutlet UIToolbar *editToolbar;
 
+@property(nonatomic, strong) IBOutlet UIBarButtonItem *centerLocationButton;
+@property(nonatomic, strong) IBOutlet UIBarButtonItem *changeLocationButton;
+@property(nonatomic, strong) IBOutlet UIBarButtonItem *saveLocationButton;
+@property(nonatomic, strong) IBOutlet UIBarButtonItem *doneButton;
+
 @property(nonatomic, assign) BOOL editMode;
 @property(nonatomic, assign) BOOL lsAvailable;
 @property(nonatomic, strong) Where *where;

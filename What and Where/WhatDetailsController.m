@@ -17,7 +17,7 @@
 
 @implementation WhatDetailsController
 
-@synthesize scrollView, imageBg, imageView, whatTextField, notesTextView, whereButton, cheapest;
+@synthesize scrollView, imageBg, imageView, whatTextField, notesTextView, whereButton, cheapest, bestPriceLabel, noPhotoLabel;
 @synthesize imageRect, imageResized, keyboardVisible, addMode, what;
 @synthesize managedObjectContext = managedObjectContext_;
 @synthesize tapGesture;
@@ -83,6 +83,13 @@
     imageResized = NO;
     
     keyboardVisible = NO;
+    
+    // Localisation interface
+    [whatTextField setPlaceholder:NSLocalizedString(@"What ?", @"")];
+    [bestPriceLabel setText:NSLocalizedString(@"Best price:", @"")];
+    [noPhotoLabel setText:NSLocalizedString(@"No photo", @"")];
+    [whereButton setTitle:NSLocalizedString(@"Where ?", @"") forState:UIControlStateNormal];
+    [whereButton setTitle:NSLocalizedString(@"Where ?", @"") forState:UIControlStateHighlighted];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -111,12 +118,12 @@
     if (whatTextField.enabled) {
         if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
             // Un appareil photo est disponible, on laisse le choix de la source
-            UIActionSheet *photoSourceSheet = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"Add a photo", @"Title for photo source sheet") 
+            UIActionSheet *photoSourceSheet = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"Add a photo", @"") 
                                                                           delegate:self 
-                                                                 cancelButtonTitle:NSLocalizedString(@"Cancel", @"Cancel button on photo source sheet") 
+                                                                 cancelButtonTitle:NSLocalizedString(@"Cancel", @"") 
                                                             destructiveButtonTitle:nil 
-                                                                 otherButtonTitles:NSLocalizedString(@"Take new photo", "Photo from camera button on photo source sheet"), 
-                                                                                   NSLocalizedString(@"Choose existing photo", "Photo from library on photo source sheet"), 
+                                                                 otherButtonTitles:NSLocalizedString(@"Take new photo", ""), 
+                                                                                   NSLocalizedString(@"Choose existing photo", ""), 
                                                                                    nil, nil];
             [photoSourceSheet showInView:self.view];
         } else {

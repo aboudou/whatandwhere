@@ -21,6 +21,9 @@
 @property(nonatomic, strong) IBOutlet UIButton *whereButton;
 @property(nonatomic, strong) IBOutlet UILabel *cheapest;
 
+@property(nonatomic, strong) IBOutlet UILabel *bestPriceLabel;
+@property(nonatomic, strong) IBOutlet UILabel *noPhotoLabel;
+
 @property(nonatomic, assign) BOOL imageResized;
 @property(nonatomic, assign) CGRect imageRect;
 @property(nonatomic, assign) BOOL keyboardVisible;

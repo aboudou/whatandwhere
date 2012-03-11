@@ -1,5 +1,13 @@
-/* Add button on Where list controller */
-"Add" = "Add";
+/** WhatDetailsController */
+
+/* Default name for What object */
+"What ?" = "What ?";
+
+/* Label for best price */
+"Best price:" = "Best price:";
+
+/* Label for no photo */
+"No photo" = "No photo";
 
 /* Title for photo source sheet */
 "Add a photo" = "Add a photo";
@@ -10,8 +18,27 @@
 /* Photo from library on photo source sheet */
 "Choose existing photo" = "Choose existing photo";
 
+/* Photo from camera button on photo source sheet */
+"Take new photo" = "Take new photo";
+
+
+
+/** WhereListController */
+
+/* Add button on Where list controller */
+"Add" = "Add";
+
 /* Edit button on Where list controller */
 "Edit" = "Edit";
+
+/* Default name for Where object */
+"Where ?" = "Where ?";
+
+
+/** WhereDetailsController */
+
+/* Amount text field default content */
+"How much ?" = "How much ?";
 
 /* Location button on Where list controller in edit mode */
 "Edit location" = "Modify Location";
@@ -19,18 +46,21 @@
 /* Location button on Where list controller in view mode */
 "View location" = "View Location";
 
+
+
+/** MapController */
+
+/* Drop pin button */
+"Drop pin" = "Drop pin";
+
+/* Save location button */
+"Save location" = "Save location";
+
+/* Done button */
+"Done" = "Done";
+
 /* UserAnnotation title */
 "Here" = "New location";
-
-/* Photo from camera button on photo source sheet */
-"Take new photo" = "Take new photo";
-
-/* Default name for What object */
-"What ?" = "What ?";
-
-/* Default name for Where object
- Navigation title on Where list controller */
-"Where ?" = "Where ?";
 
 /* Title for localisation disabled */
 "LocDisabled" = "Location Service Disabled";
@@ -40,6 +70,10 @@
 
 /* Message for localisation error */
 "The current location could not be obtained." = "The current location could not be obtained.";
+
+
+
+/** Misc */
 
 /* Error */
 "Error" = "Error";

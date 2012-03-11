@@ -14,7 +14,7 @@
 @synthesize coordinate;
 
 -(NSString *) title {
-    return NSLocalizedString(@"Here", @"UserAnnotation title");
+    return NSLocalizedString(@"Here", @"");
 }
 
 -(NSString *) subtitle {
