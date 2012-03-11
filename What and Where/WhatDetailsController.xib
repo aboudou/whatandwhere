@@ -291,12 +291,12 @@
 								<string key="NSFrame">{{20, 20}, {95, 95}}</string>
 								<reference key="NSSuperview" ref="402465858"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="504052796"/>
-								<int key="IBUIContentMode">2</int>
+								<reference key="NSNextKeyView" ref="841378385"/>
+								<int key="IBUIContentMode">1</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
-							<object class="IBUIButton" id="504052796">
+							<object class="IBUIButton" id="841378385">
 								<reference key="NSNextResponder" ref="402465858"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{96, 11}, {33, 33}}</string>
@@ -497,7 +497,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delPhotoButton</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="504052796"/>
+						<reference key="destination" ref="841378385"/>
 					</object>
 					<int key="connectionID">58</int>
 				</object>
@@ -513,7 +513,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">delPhotoButtonClicked:</string>
-						<reference key="source" ref="504052796"/>
+						<reference key="source" ref="841378385"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -563,7 +563,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 							<reference ref="185250210"/>
 							<reference ref="828964742"/>
 							<reference ref="1029840179"/>
-							<reference ref="504052796"/>
+							<reference ref="841378385"/>
 						</object>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -623,7 +623,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">56</int>
-						<reference key="object" ref="504052796"/>
+						<reference key="object" ref="841378385"/>
 						<reference key="parent" ref="402465858"/>
 					</object>
 				</object>

@@ -78,6 +78,9 @@
     imageView.layer.masksToBounds = YES;
     imageBg.layer.cornerRadius = 9.0;
     imageBg.layer.masksToBounds = YES;
+    if (imageView.image != nil) {
+        imageBg.backgroundColor = [UIColor blackColor];
+    }
     
     imageRect = imageView.frame;
     imageResized = NO;
@@ -173,7 +176,11 @@
                 [[self navigationController] setNavigationBarHidden:NO animated:YES];
                 [imageView setFrame:imageRect];
                 [imageBg setFrame:imageRect];
-                [imageBg setBackgroundColor:[UIColor whiteColor]];
+                if (imageView.image != nil) {
+                    imageBg.backgroundColor = [UIColor blackColor];
+                } else {
+                    [imageBg setBackgroundColor:[UIColor whiteColor]];
+                }
 
                 imageResized = NO;
                 
@@ -188,6 +195,8 @@
 -(IBAction) delPhotoButtonClicked:(id)sender {
     imageView.image = nil;
     
+    [imageBg setBackgroundColor:[UIColor whiteColor]];
+
     delPhotoButton.enabled = NO;
     delPhotoButton.hidden = YES;
 }

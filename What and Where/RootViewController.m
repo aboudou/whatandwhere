@@ -11,6 +11,7 @@
 #import "RootViewController.h"
 #import "WhatDetailsController.h"
 #import "What.h"
+#import "WhatListTableViewCell.h"
 
 
 @interface RootViewController ()
@@ -51,7 +52,7 @@
 }
 
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(WhatListTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
     What *selectedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
@@ -125,10 +126,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    WhatListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-//        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[WhatListTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
     // Configure the cell.

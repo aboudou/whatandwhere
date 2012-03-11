@@ -18,6 +18,7 @@
 		3B0BFE5F150CA43700F71AB1 /* close_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0BFE5B150CA43700F71AB1 /* close_pressed@2x.png */; };
 		3B0BFE60150CA43700F71AB1 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0BFE5C150CA43700F71AB1 /* close.png */; };
 		3B0BFE61150CA43700F71AB1 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0BFE5D150CA43700F71AB1 /* close@2x.png */; };
+		3B0BFE64150CCD8E00F71AB1 /* WhatListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0BFE63150CCD8E00F71AB1 /* WhatListTableViewCell.m */; };
 		3B200C79132CBFC4001C7168 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B200C78132CBFC4001C7168 /* QuartzCore.framework */; };
 		3B28C0591372BF890062B9E1 /* WhereListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B28C0581372BF890062B9E1 /* WhereListController.xib */; };
 		3B2C92371367F62C00484A36 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B2C92351367F62C00484A36 /* pin.png */; };
@@ -65,6 +66,8 @@
 		3B0BFE5B150CA43700F71AB1 /* close_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_pressed@2x.png"; sourceTree = "<group>"; };
 		3B0BFE5C150CA43700F71AB1 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		3B0BFE5D150CA43700F71AB1 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
+		3B0BFE62150CCD8E00F71AB1 /* WhatListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhatListTableViewCell.h; sourceTree = "<group>"; };
+		3B0BFE63150CCD8E00F71AB1 /* WhatListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhatListTableViewCell.m; sourceTree = "<group>"; };
 		3B200C78132CBFC4001C7168 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3B28C0581372BF890062B9E1 /* WhereListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhereListController.xib; sourceTree = "<group>"; };
 		3B2C92351367F62C00484A36 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
@@ -262,6 +265,8 @@
 				3B94E22E143CA428003F58B4 /* macros.h */,
 				3B4644EB1372C482009D3008 /* UserAnnotation.h */,
 				3B4644EC1372C482009D3008 /* UserAnnotation.m */,
+				3B0BFE62150CCD8E00F71AB1 /* WhatListTableViewCell.h */,
+				3B0BFE63150CCD8E00F71AB1 /* WhatListTableViewCell.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 				3B4645021372C482009D3008 /* Where.m in Sources */,
 				3B4645031372C482009D3008 /* WhereDetailsController.m in Sources */,
 				3B4645041372C482009D3008 /* WhereListController.m in Sources */,
+				3B0BFE64150CCD8E00F71AB1 /* WhatListTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
