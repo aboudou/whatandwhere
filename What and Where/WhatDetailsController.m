@@ -17,7 +17,7 @@
 
 @implementation WhatDetailsController
 
-@synthesize scrollView, imageBg, imageView, whatTextField, notesTextView, whereButton, cheapest, bestPriceLabel, noPhotoLabel;
+@synthesize scrollView, imageBg, imageView, whatTextField, notesTextView, whereButton, delPhotoButton, cheapest, bestPriceLabel, noPhotoLabel;
 @synthesize imageRect, imageResized, keyboardVisible, addMode, what;
 @synthesize managedObjectContext = managedObjectContext_;
 @synthesize tapGesture;
@@ -96,7 +96,6 @@
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
     
-    // Release any cached data, images, etc. that aren't in use.
 }
 
 -(void) viewWillDisappear:(BOOL)animated {
@@ -105,6 +104,11 @@
 
 
 - (void)viewDidUnload {
+    // Sauvegarde des modifications
+    if (whatTextField.enabled) {
+        [self save:nil];
+    }
+
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -181,6 +185,13 @@
     }
 }
 
+-(IBAction) delPhotoButtonClicked:(id)sender {
+    imageView.image = nil;
+    
+    delPhotoButton.enabled = NO;
+    delPhotoButton.hidden = YES;
+}
+
 -(IBAction) whereButtonClicked:(id)sender {
     WhereListController *whereListController = [[WhereListController alloc] initWithNibName:@"WhereListController" bundle:nil];
     
@@ -201,6 +212,7 @@
 - (IBAction)cancel:(id)sender {
     whatTextField.text = what.whatName;
     notesTextView.text = what.whatNotes;
+    imageView.image = [[UIImage alloc] initWithData:what.whatPhoto];
     
     self.title = what.whatName;
     
@@ -213,6 +225,7 @@
             what.whatName = whatTextField.text;
         }
         what.whatNotes = notesTextView.text;        
+        what.whatPhoto = UIImagePNGRepresentation(imageView.image);
         
         self.title = what.whatName;
     }
@@ -277,6 +290,11 @@
     notesTextView.editable = YES;
     whereButton.enabled = NO;
     whereButton.hidden = YES;
+
+    if (imageView.image != nil) {
+        delPhotoButton.enabled = YES;
+        delPhotoButton.hidden = NO;
+    }
 }
 
 -(void) setNonEditableView {
@@ -290,6 +308,9 @@
     notesTextView.editable = NO;
     whereButton.enabled = YES;
     whereButton.hidden = NO;
+
+    delPhotoButton.enabled = NO;
+    delPhotoButton.hidden = YES;
 }
 
 
@@ -297,8 +318,15 @@
 #pragma mark UIImagePickerControllerDelegate functions
 
 
--(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
-    self.what.whatPhoto = UIImagePNGRepresentation(image);
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    // On sauvegarde directement la photo : la prise de photo avec iPhone 3GS provoque un memory warning et décharge la vue courante,
+    //   du coup l'image est perdue.
+    what.whatPhoto = UIImagePNGRepresentation((UIImage *)[info objectForKey:@"UIImagePickerControllerEditedImage"]);
+    
+    if (what.whatPhoto != nil) {
+        delPhotoButton.enabled = YES;
+        delPhotoButton.hidden = NO;
+    }
     
     [self dismissModalViewControllerAnimated:YES];
 }

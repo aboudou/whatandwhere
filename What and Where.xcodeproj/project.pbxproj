@@ -14,6 +14,10 @@
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E55F0DE3E45000AC0155 /* RootViewController.xib */; };
 		28D3F202112F7DC200FD0661 /* What__Where__How_Much.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* What__Where__How_Much.xcdatamodeld */; };
+		3B0BFE5E150CA43700F71AB1 /* close_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0BFE5A150CA43700F71AB1 /* close_pressed.png */; };
+		3B0BFE5F150CA43700F71AB1 /* close_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0BFE5B150CA43700F71AB1 /* close_pressed@2x.png */; };
+		3B0BFE60150CA43700F71AB1 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0BFE5C150CA43700F71AB1 /* close.png */; };
+		3B0BFE61150CA43700F71AB1 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0BFE5D150CA43700F71AB1 /* close@2x.png */; };
 		3B200C79132CBFC4001C7168 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B200C78132CBFC4001C7168 /* QuartzCore.framework */; };
 		3B28C0591372BF890062B9E1 /* WhereListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B28C0581372BF890062B9E1 /* WhereListController.xib */; };
 		3B2C92371367F62C00484A36 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B2C92351367F62C00484A36 /* pin.png */; };
@@ -57,6 +61,10 @@
 		2899E55F0DE3E45000AC0155 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		28A0AAE50D9B0CCF005BE974 /* What__Where__How_Much_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = What__Where__How_Much_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B0BFE5A150CA43700F71AB1 /* close_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_pressed.png; sourceTree = "<group>"; };
+		3B0BFE5B150CA43700F71AB1 /* close_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_pressed@2x.png"; sourceTree = "<group>"; };
+		3B0BFE5C150CA43700F71AB1 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		3B0BFE5D150CA43700F71AB1 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
 		3B200C78132CBFC4001C7168 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3B28C0581372BF890062B9E1 /* WhereListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhereListController.xib; sourceTree = "<group>"; };
 		3B2C92351367F62C00484A36 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
@@ -231,6 +239,10 @@
 			children = (
 				3BF5E8C31344C0F40062F8E6 /* arrow.png */,
 				3BF5E8C41344C0F50062F8E6 /* arrow@2x.png */,
+				3B0BFE5A150CA43700F71AB1 /* close_pressed.png */,
+				3B0BFE5B150CA43700F71AB1 /* close_pressed@2x.png */,
+				3B0BFE5C150CA43700F71AB1 /* close.png */,
+				3B0BFE5D150CA43700F71AB1 /* close@2x.png */,
 				3BEAB45E13684B12000DA2B1 /* Default.png */,
 				3BEAB45F13684B12000DA2B1 /* Default@2x.png */,
 				3B2C9239136801E900484A36 /* empty.png */,
@@ -327,6 +339,10 @@
 				3BF46702150C92BC00795041 /* MapController.xib in Resources */,
 				3BF46706150C980700795041 /* WhatDetailsController.xib in Resources */,
 				3BF46704150C951000795041 /* WhereDetailsController.xib in Resources */,
+				3B0BFE5E150CA43700F71AB1 /* close_pressed.png in Resources */,
+				3B0BFE5F150CA43700F71AB1 /* close_pressed@2x.png in Resources */,
+				3B0BFE60150CA43700F71AB1 /* close.png in Resources */,
+				3B0BFE61150CA43700F71AB1 /* close@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

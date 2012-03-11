@@ -19,6 +19,7 @@
 @property(nonatomic, strong) IBOutlet UITextField *whatTextField;
 @property(nonatomic, strong) IBOutlet UITextView *notesTextView;
 @property(nonatomic, strong) IBOutlet UIButton *whereButton;
+@property(nonatomic, strong) IBOutlet UIButton *delPhotoButton;
 @property(nonatomic, strong) IBOutlet UILabel *cheapest;
 
 @property(nonatomic, strong) IBOutlet UILabel *bestPriceLabel;
@@ -35,6 +36,7 @@
 @property(nonatomic, strong) UITapGestureRecognizer *tapGesture;
 
 -(IBAction) addPhotoButtonClicked:(id)sender;
+-(IBAction) delPhotoButtonClicked:(id)sender;
 -(IBAction) whereButtonClicked:(id)sender;
 
 -(IBAction) switchEdit:(id)sender;
