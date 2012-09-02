@@ -18,7 +18,6 @@
 		3B0BFE5F150CA43700F71AB1 /* close_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0BFE5B150CA43700F71AB1 /* close_pressed@2x.png */; };
 		3B0BFE60150CA43700F71AB1 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0BFE5C150CA43700F71AB1 /* close.png */; };
 		3B0BFE61150CA43700F71AB1 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0BFE5D150CA43700F71AB1 /* close@2x.png */; };
-		3B0BFE64150CCD8E00F71AB1 /* WhatListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0BFE63150CCD8E00F71AB1 /* WhatListTableViewCell.m */; };
 		3B200C79132CBFC4001C7168 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B200C78132CBFC4001C7168 /* QuartzCore.framework */; };
 		3B28C0591372BF890062B9E1 /* WhereListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B28C0581372BF890062B9E1 /* WhereListController.xib */; };
 		3B2C92371367F62C00484A36 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B2C92351367F62C00484A36 /* pin.png */; };
@@ -42,6 +41,8 @@
 		3B95046E132CB44C00686AC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B95046D132CB44C00686AC0 /* InfoPlist.strings */; };
 		3BCAC60D132B8A4D00C56658 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCAC60C132B8A4D00C56658 /* MapKit.framework */; };
 		3BCAC615132B8B6800C56658 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCAC614132B8B6800C56658 /* CoreLocation.framework */; };
+		3BE8A27115F337B40015F6EE /* WhatViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8A27015F337B40015F6EE /* WhatViewCell.m */; };
+		3BE8A27315F337E10015F6EE /* WhatViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BE8A27215F337E10015F6EE /* WhatViewCell.xib */; };
 		3BEAB46013684B12000DA2B1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BEAB45E13684B12000DA2B1 /* Default.png */; };
 		3BEAB46113684B12000DA2B1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BEAB45F13684B12000DA2B1 /* Default@2x.png */; };
 		3BF46702150C92BC00795041 /* MapController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF46703150C92BC00795041 /* MapController.xib */; };
@@ -66,8 +67,6 @@
 		3B0BFE5B150CA43700F71AB1 /* close_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close_pressed@2x.png"; sourceTree = "<group>"; };
 		3B0BFE5C150CA43700F71AB1 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		3B0BFE5D150CA43700F71AB1 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
-		3B0BFE62150CCD8E00F71AB1 /* WhatListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhatListTableViewCell.h; sourceTree = "<group>"; };
-		3B0BFE63150CCD8E00F71AB1 /* WhatListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhatListTableViewCell.m; sourceTree = "<group>"; };
 		3B200C78132CBFC4001C7168 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3B28C0581372BF890062B9E1 /* WhereListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhereListController.xib; sourceTree = "<group>"; };
 		3B2C92351367F62C00484A36 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
@@ -103,6 +102,9 @@
 		3B95046F132CB45700686AC0 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3BCAC60C132B8A4D00C56658 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3BCAC614132B8B6800C56658 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3BE8A26F15F337B40015F6EE /* WhatViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhatViewCell.h; sourceTree = "<group>"; };
+		3BE8A27015F337B40015F6EE /* WhatViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhatViewCell.m; sourceTree = "<group>"; };
+		3BE8A27215F337E10015F6EE /* WhatViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhatViewCell.xib; sourceTree = "<group>"; };
 		3BEAB45E13684B12000DA2B1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3BEAB45F13684B12000DA2B1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3BF46703150C92BC00795041 /* MapController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapController.xib; sourceTree = "<group>"; };
@@ -226,6 +228,9 @@
 				3B4644E91372C482009D3008 /* RootViewController.h */,
 				3B4644EA1372C482009D3008 /* RootViewController.m */,
 				2899E55F0DE3E45000AC0155 /* RootViewController.xib */,
+				3BE8A26F15F337B40015F6EE /* WhatViewCell.h */,
+				3BE8A27015F337B40015F6EE /* WhatViewCell.m */,
+				3BE8A27215F337E10015F6EE /* WhatViewCell.xib */,
 				3B4644E71372C482009D3008 /* MapController.h */,
 				3B4644E81372C482009D3008 /* MapController.m */,
 				3BF46703150C92BC00795041 /* MapController.xib */,
@@ -265,8 +270,6 @@
 				3B94E22E143CA428003F58B4 /* macros.h */,
 				3B4644EB1372C482009D3008 /* UserAnnotation.h */,
 				3B4644EC1372C482009D3008 /* UserAnnotation.m */,
-				3B0BFE62150CCD8E00F71AB1 /* WhatListTableViewCell.h */,
-				3B0BFE63150CCD8E00F71AB1 /* WhatListTableViewCell.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				3B0BFE5F150CA43700F71AB1 /* close_pressed@2x.png in Resources */,
 				3B0BFE60150CA43700F71AB1 /* close.png in Resources */,
 				3B0BFE61150CA43700F71AB1 /* close@2x.png in Resources */,
+				3BE8A27315F337E10015F6EE /* WhatViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +373,7 @@
 				3B4645021372C482009D3008 /* Where.m in Sources */,
 				3B4645031372C482009D3008 /* WhereDetailsController.m in Sources */,
 				3B4645041372C482009D3008 /* WhereListController.m in Sources */,
-				3B0BFE64150CCD8E00F71AB1 /* WhatListTableViewCell.m in Sources */,
+				3BE8A27115F337B40015F6EE /* WhatViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

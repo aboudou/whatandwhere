@@ -11,7 +11,8 @@
 #import "RootViewController.h"
 #import "WhatDetailsController.h"
 #import "What.h"
-#import "WhatListTableViewCell.h"
+#import "Where.h"
+#import "WhatViewCell.h"
 
 
 @interface RootViewController ()
@@ -38,6 +39,8 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
     self.navigationItem.rightBarButtonItem = addButton;
     
+    self.tableView.rowHeight = 92;
+    
 }
 
 
@@ -52,17 +55,33 @@
 }
 
 
-- (void)configureCell:(WhatListTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(WhatViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
     What *selectedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    cell.textLabel.text = selectedObject.whatName;
-    cell.detailTextLabel.text = selectedObject.whatNotes;
+    cell.what.text = selectedObject.whatName;
+    
+    // Get best price
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"wherePrice" ascending:YES];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+    
+    NSArray *wheres = [selectedObject.wheres sortedArrayUsingDescriptors:sortDescriptors];
+    if ([wheres count] > 0) {
+        NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+        
+        cell.bestPrice.text = [NSString localizedStringWithFormat:@"%@ (%1.3f %@)",
+                         [[wheres objectAtIndex:0] whereName],
+                         [[[wheres objectAtIndex:0] wherePrice] floatValue],
+                         [f currencySymbol]];
+        
+    } else {
+        cell.bestPrice.text = @"";
+    }
     
     if (selectedObject.whatPhoto != nil) {
-        cell.imageView.image = [[UIImage alloc] initWithData:selectedObject.whatPhoto];
-        cell.imageView.layer.cornerRadius = 9.0;
-        cell.imageView.layer.masksToBounds = YES;
+        cell.image.image = [[UIImage alloc] initWithData:selectedObject.whatPhoto];
+        cell.image.layer.cornerRadius = 9.0;
+        cell.image.layer.masksToBounds = YES;
     } else {
         cell.imageView.image = [UIImage imageNamed:@"empty"];
     }
@@ -126,9 +145,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
     
-    WhatListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    WhatViewCell *cell = (WhatViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[WhatListTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        UIViewController *c = [[UIViewController alloc] initWithNibName:@"WhatViewCell" bundle:nil];
+        
+        cell = (WhatViewCell *)c.view;
     }
     
     // Configure the cell.
