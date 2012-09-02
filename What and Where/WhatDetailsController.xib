@@ -2,24 +2,24 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1296</int>
-		<string key="IBDocument.SystemVersion">11D50b</string>
-		<string key="IBDocument.InterfaceBuilderVersion">2182</string>
-		<string key="IBDocument.AppKitVersion">1138.32</string>
-		<string key="IBDocument.HIToolboxVersion">568.00</string>
+		<string key="IBDocument.SystemVersion">12B19</string>
+		<string key="IBDocument.InterfaceBuilderVersion">2549</string>
+		<string key="IBDocument.AppKitVersion">1187</string>
+		<string key="IBDocument.HIToolboxVersion">624.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">1179</string>
+			<string key="NS.object.0">1498</string>
 		</object>
 		<object class="NSArray" key="IBDocument.IntegratedClassDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<string>IBUIView</string>
-			<string>IBUIImageView</string>
 			<string>IBProxyObject</string>
+			<string>IBUIButton</string>
+			<string>IBUIImageView</string>
 			<string>IBUILabel</string>
+			<string>IBUIScrollView</string>
 			<string>IBUITextField</string>
 			<string>IBUITextView</string>
-			<string>IBUIScrollView</string>
-			<string>IBUIButton</string>
+			<string>IBUIView</string>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -178,7 +178,6 @@
 								<string key="NSFrame">{{20, 359}, {280, 37}}</string>
 								<reference key="NSSuperview" ref="402465858"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBUIContentHorizontalAlignment">0</int>
@@ -248,36 +247,21 @@
 								<int key="NSvFlags">292</int>
 								<object class="NSMutableArray" key="NSSubviews">
 									<bool key="EncodedWithXMLCoder">YES</bool>
-									<object class="IBUILabel" id="1073338385">
+									<object class="IBUIImageView" id="148780158">
 										<reference key="NSNextResponder" ref="1029840179"/>
 										<int key="NSvFlags">292</int>
-										<string key="NSFrame">{{0, 37}, {95, 21}}</string>
+										<string key="NSFrameSize">{95, 95}</string>
 										<reference key="NSSuperview" ref="1029840179"/>
 										<reference key="NSWindow"/>
-										<reference key="NSNextKeyView" ref="185250210"/>
-										<string key="NSReuseIdentifierKey">_NS:9</string>
-										<bool key="IBUIOpaque">NO</bool>
-										<bool key="IBUIClipsSubviews">YES</bool>
-										<int key="IBUIContentMode">7</int>
+										<int key="IBUIContentMode">1</int>
 										<bool key="IBUIUserInteractionEnabled">NO</bool>
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-										<string key="IBUIText">No photo</string>
-										<reference key="IBUITextColor" ref="817412856"/>
-										<nil key="IBUIHighlightedColor"/>
-										<int key="IBUIBaselineAdjustment">0</int>
-										<float key="IBUIMinimumFontSize">10</float>
-										<int key="IBUITextAlignment">1</int>
-										<object class="IBUIFontDescription" key="IBUIFontDescription">
-											<int key="type">1</int>
-											<double key="pointSize">14</double>
-										</object>
-										<reference key="IBUIFont" ref="707422965"/>
 									</object>
 								</object>
 								<string key="NSFrame">{{20, 20}, {95, 95}}</string>
 								<reference key="NSSuperview" ref="402465858"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="1073338385"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<reference key="IBUIBackgroundColor" ref="524125478"/>
 								<object class="NSArray" key="IBUIGestureRecognizers" id="0">
@@ -479,14 +463,6 @@ AAgACAAIAAEAAQABAAE</bytes>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">noPhotoLabel</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="1073338385"/>
-					</object>
-					<int key="connectionID">54</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">bestPriceLabel</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="828964742"/>
@@ -500,6 +476,14 @@ AAgACAAIAAEAAQABAAE</bytes>
 						<reference key="destination" ref="841378385"/>
 					</object>
 					<int key="connectionID">58</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">noPhoto</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="148780158"/>
+					</object>
+					<int key="connectionID">60</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -612,19 +596,19 @@ AAgACAAIAAEAAQABAAE</bytes>
 						<reference key="object" ref="1029840179"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="1073338385"/>
+							<reference ref="148780158"/>
 						</object>
 						<reference key="parent" ref="402465858"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">52</int>
-						<reference key="object" ref="1073338385"/>
-						<reference key="parent" ref="1029840179"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">56</int>
 						<reference key="object" ref="841378385"/>
 						<reference key="parent" ref="402465858"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">59</int>
+						<reference key="object" ref="148780158"/>
+						<reference key="parent" ref="1029840179"/>
 					</object>
 				</object>
 			</object>
@@ -646,9 +630,9 @@ AAgACAAIAAEAAQABAAE</bytes>
 					<string>42.IBPluginDependency</string>
 					<string>43.IBPluginDependency</string>
 					<string>45.IBPluginDependency</string>
-					<string>52.IBPluginDependency</string>
 					<string>56.IBPluginDependency</string>
 					<string>56.IBUIButtonInspectorSelectedStateConfigurationMetadataKey</string>
+					<string>59.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
 				</object>
 				<object class="NSArray" key="dict.values">
@@ -668,8 +652,8 @@ AAgACAAIAAEAAQABAAE</bytes>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<real value="1"/>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
 			</object>
@@ -685,7 +669,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">58</int>
+			<int key="maxID">60</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -762,7 +746,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 							<string>delPhotoButton</string>
 							<string>imageBg</string>
 							<string>imageView</string>
-							<string>noPhotoLabel</string>
+							<string>noPhoto</string>
 							<string>notesTextView</string>
 							<string>scrollView</string>
 							<string>whatTextField</string>
@@ -775,7 +759,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 							<string>UIButton</string>
 							<string>UIView</string>
 							<string>UIImageView</string>
-							<string>UILabel</string>
+							<string>UIImageView</string>
 							<string>UITextView</string>
 							<string>UIScrollView</string>
 							<string>UITextField</string>
@@ -791,7 +775,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 							<string>delPhotoButton</string>
 							<string>imageBg</string>
 							<string>imageView</string>
-							<string>noPhotoLabel</string>
+							<string>noPhoto</string>
 							<string>notesTextView</string>
 							<string>scrollView</string>
 							<string>whatTextField</string>
@@ -820,8 +804,8 @@ AAgACAAIAAEAAQABAAE</bytes>
 								<string key="candidateClassName">UIImageView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
-								<string key="name">noPhotoLabel</string>
-								<string key="candidateClassName">UILabel</string>
+								<string key="name">noPhoto</string>
+								<string key="candidateClassName">UIImageView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">notesTextView</string>
@@ -873,6 +857,6 @@ AAgACAAIAAEAAQABAAE</bytes>
 				<string>{32, 33}</string>
 			</object>
 		</object>
-		<string key="IBCocoaTouchPluginVersion">1179</string>
+		<string key="IBCocoaTouchPluginVersion">1498</string>
 	</data>
 </archive>

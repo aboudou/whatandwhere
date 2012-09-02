@@ -78,12 +78,13 @@
         cell.bestPrice.text = @"";
     }
     
+    cell.image.layer.cornerRadius = 9.0;
+    cell.image.layer.masksToBounds = YES;
+
     if (selectedObject.whatPhoto != nil) {
         cell.image.image = [[UIImage alloc] initWithData:selectedObject.whatPhoto];
-        cell.image.layer.cornerRadius = 9.0;
-        cell.image.layer.masksToBounds = YES;
     } else {
-        cell.imageView.image = [UIImage imageNamed:@"empty"];
+        cell.image.image = [UIImage imageNamed:@"empty"];
     }
 
 }

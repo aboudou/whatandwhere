@@ -54,8 +54,10 @@
     cell.detailTextLabel.text = [[managedObject valueForKey:@"whereNotes"] description];
 
     if ([[managedObject valueForKey:@"whereLatitude"] intValue] != -1 && [[managedObject valueForKey:@"whereLongitude"] intValue] != -1) {
+        [cell.imageView setHidden:NO];
         cell.imageView.image = [UIImage imageNamed:@"pin"];
     } else {
+        [cell.imageView setHidden:YES];
         cell.imageView.image = [UIImage imageNamed:@"empty"];
     }
     

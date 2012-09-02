@@ -17,7 +17,7 @@
 
 @implementation WhatDetailsController
 
-@synthesize scrollView, imageBg, imageView, whatTextField, notesTextView, whereButton, delPhotoButton, cheapest, bestPriceLabel, noPhotoLabel;
+@synthesize scrollView, imageBg, imageView, whatTextField, notesTextView, whereButton, delPhotoButton, cheapest, bestPriceLabel, noPhoto;
 @synthesize imageRect, imageResized, keyboardVisible, addMode, what;
 @synthesize managedObjectContext = managedObjectContext_;
 @synthesize tapGesture;
@@ -90,7 +90,7 @@
     // Localisation interface
     [whatTextField setPlaceholder:NSLocalizedString(@"What ?", @"")];
     [bestPriceLabel setText:NSLocalizedString(@"Best price:", @"")];
-    [noPhotoLabel setText:NSLocalizedString(@"No photo", @"")];
+    [noPhoto setImage:[UIImage imageNamed:@"empty"]];
     [whereButton setTitle:NSLocalizedString(@"Where ?", @"") forState:UIControlStateNormal];
     [whereButton setTitle:NSLocalizedString(@"Where ?", @"") forState:UIControlStateHighlighted];
 }
@@ -145,48 +145,48 @@
     } else {
         if ([imageView image] != nil) {
             if (!imageResized) {
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.3];
-                
-                imageView.layer.cornerRadius = 0.0;
-                imageView.layer.masksToBounds = NO;
-                imageBg.layer.cornerRadius = 0.0;
-                imageBg.layer.masksToBounds = NO;
+                [noPhoto setHidden:YES];
 
-                [[self navigationController] setNavigationBarHidden:YES animated:YES];
-                [imageView setFrame:CGRectMake(0, 70, 320, 320)];
-                [imageBg setFrame:CGRectMake(0, 0, 320, 460)];
-                [imageBg setBackgroundColor:[UIColor blackColor]];
-
-                imageResized = YES;
-                
-                [UIView commitAnimations];
-
-                [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:YES];
-
+                [UIView animateWithDuration:0.3
+                                 animations:^{
+                                     imageView.layer.cornerRadius = 0.0;
+                                     imageView.layer.masksToBounds = NO;
+                                     imageBg.layer.cornerRadius = 0.0;
+                                     imageBg.layer.masksToBounds = NO;
+                                     
+                                     [[self navigationController] setNavigationBarHidden:YES animated:YES];
+                                     [imageView setFrame:CGRectMake(0, 70, 320, 320)];
+                                     [imageBg setFrame:CGRectMake(0, 0, 320, 460)];
+                                     [imageBg setBackgroundColor:[UIColor blackColor]];
+                                     
+                                     imageResized = YES;
+                                 }
+                                 completion:^(BOOL finished){
+                                     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:YES];
+                                 }];
             } else {
-                [UIView beginAnimations:nil context:NULL];
-                [UIView setAnimationDuration:0.3];
-                
-                imageView.layer.cornerRadius = 9.0;
-                imageView.layer.masksToBounds = YES;
-                imageBg.layer.cornerRadius = 9.0;
-                imageBg.layer.masksToBounds = YES;
-                
-                [[self navigationController] setNavigationBarHidden:NO animated:YES];
-                [imageView setFrame:imageRect];
-                [imageBg setFrame:imageRect];
-                if (imageView.image != nil) {
-                    imageBg.backgroundColor = [UIColor blackColor];
-                } else {
-                    [imageBg setBackgroundColor:[UIColor whiteColor]];
-                }
-
-                imageResized = NO;
-                
-                [UIView commitAnimations];
-
-                [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+                [UIView animateWithDuration:0.3
+                                 animations:^{
+                                     imageView.layer.cornerRadius = 9.0;
+                                     imageView.layer.masksToBounds = YES;
+                                     imageBg.layer.cornerRadius = 9.0;
+                                     imageBg.layer.masksToBounds = YES;
+                                     
+                                     [[self navigationController] setNavigationBarHidden:NO animated:YES];
+                                     [imageView setFrame:imageRect];
+                                     [imageBg setFrame:imageRect];
+                                     if (imageView.image != nil) {
+                                         imageBg.backgroundColor = [UIColor blackColor];
+                                     } else {
+                                         [imageBg setBackgroundColor:[UIColor whiteColor]];
+                                     }
+                                     
+                                     imageResized = NO;
+                                 }
+                                 completion:^(BOOL finished){
+                                     [noPhoto setHidden:NO];
+                                     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+                                 }];
             }
         }
     }

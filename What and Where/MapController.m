@@ -143,12 +143,10 @@
     
     
     if (lsAvailable) {
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:0.3];
-        
-        [self.mapView setCenterCoordinate:userCoordinates animated:YES];
-        
-        [UIView commitAnimations];
+        [UIView animateWithDuration:0.3
+                         animations:^{
+                             [self.mapView setCenterCoordinate:userCoordinates animated:YES];
+                         }];
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"LocDisabled", @"") 
                                                         message:NSLocalizedString(@"LocDisabledMsg", @"") 
