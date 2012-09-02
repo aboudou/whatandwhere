@@ -21,15 +21,8 @@
 /* Photo from camera button on photo source sheet */
 "Take new photo" = "Take new photo";
 
-
-
-/** WhereListController */
-
-/* Add button on Where list controller */
-"Add" = "Add";
-
-/* Edit button on Where list controller */
-"Edit" = "Edit";
+/* Add button on WhatDetailsController */
+"Add" = "Add a new location";
 
 /* Default name for Where object */
 "Where ?" = "Where ?";
