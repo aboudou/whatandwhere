@@ -37,12 +37,15 @@
 		3B6B0724132CEB07006D6E5E /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 3B6B0721132CEB07006D6E5E /* iTunesArtwork */; };
 		3B950454132CB12A00686AC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B950452132CB12A00686AC0 /* Localizable.strings */; };
 		3B95046E132CB44C00686AC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B95046D132CB44C00686AC0 /* InfoPlist.strings */; };
+		3BA47FFD1603032A00C4D678 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BA47FFB1603032A00C4D678 /* bg.png */; };
+		3BA47FFE1603032A00C4D678 /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BA47FFC1603032A00C4D678 /* bg@2x.png */; };
 		3BCAC60D132B8A4D00C56658 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCAC60C132B8A4D00C56658 /* MapKit.framework */; };
 		3BCAC615132B8B6800C56658 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCAC614132B8B6800C56658 /* CoreLocation.framework */; };
 		3BE8A27115F337B40015F6EE /* WhatViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE8A27015F337B40015F6EE /* WhatViewCell.m */; };
 		3BE8A27315F337E10015F6EE /* WhatViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BE8A27215F337E10015F6EE /* WhatViewCell.xib */; };
 		3BEAB46013684B12000DA2B1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BEAB45E13684B12000DA2B1 /* Default.png */; };
 		3BEAB46113684B12000DA2B1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BEAB45F13684B12000DA2B1 /* Default@2x.png */; };
+		3BEC2D4616023E7300B27226 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BEC2D4516023E7300B27226 /* Default-568h@2x.png */; };
 		3BF46702150C92BC00795041 /* MapController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF46703150C92BC00795041 /* MapController.xib */; };
 		3BF46704150C951000795041 /* WhereDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF46705150C951000795041 /* WhereDetailsController.xib */; };
 		3BF46706150C980700795041 /* WhatDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BF46707150C980700795041 /* WhatDetailsController.xib */; };
@@ -95,6 +98,8 @@
 		3B950455132CB13800686AC0 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B95046B132CB44500686AC0 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3B95046F132CB45700686AC0 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3BA47FFB1603032A00C4D678 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		3BA47FFC1603032A00C4D678 /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg@2x.png"; sourceTree = "<group>"; };
 		3BCAC60C132B8A4D00C56658 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3BCAC614132B8B6800C56658 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3BE8A26F15F337B40015F6EE /* WhatViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhatViewCell.h; sourceTree = "<group>"; };
@@ -102,6 +107,7 @@
 		3BE8A27215F337E10015F6EE /* WhatViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhatViewCell.xib; sourceTree = "<group>"; };
 		3BEAB45E13684B12000DA2B1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3BEAB45F13684B12000DA2B1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3BEC2D4516023E7300B27226 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3BF46703150C92BC00795041 /* MapController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapController.xib; sourceTree = "<group>"; };
 		3BF46705150C951000795041 /* WhereDetailsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhereDetailsController.xib; sourceTree = "<group>"; };
 		3BF46707150C980700795041 /* WhatDetailsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhatDetailsController.xib; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 				3BF46700150C8C7B00795041 /* Images */,
 				3BEAB45E13684B12000DA2B1 /* Default.png */,
 				3BEAB45F13684B12000DA2B1 /* Default@2x.png */,
+				3BEC2D4516023E7300B27226 /* Default-568h@2x.png */,
 				3B6B071F132CEB07006D6E5E /* Icon-72.png */,
 				3B6B0720132CEB07006D6E5E /* Icon@2x.png */,
 				3B6B0719132CEA73006D6E5E /* Icon.png */,
@@ -244,6 +251,8 @@
 			children = (
 				3BF5E8C31344C0F40062F8E6 /* arrow.png */,
 				3BF5E8C41344C0F50062F8E6 /* arrow@2x.png */,
+				3BA47FFB1603032A00C4D678 /* bg.png */,
+				3BA47FFC1603032A00C4D678 /* bg@2x.png */,
 				3B0BFE5A150CA43700F71AB1 /* close_pressed.png */,
 				3B0BFE5B150CA43700F71AB1 /* close_pressed@2x.png */,
 				3B0BFE5C150CA43700F71AB1 /* close.png */,
@@ -292,7 +301,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0450;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "What and Where" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -343,6 +352,9 @@
 				3B0BFE60150CA43700F71AB1 /* close.png in Resources */,
 				3B0BFE61150CA43700F71AB1 /* close@2x.png in Resources */,
 				3BE8A27315F337E10015F6EE /* WhatViewCell.xib in Resources */,
+				3BEC2D4616023E7300B27226 /* Default-568h@2x.png in Resources */,
+				3BA47FFD1603032A00C4D678 /* bg.png in Resources */,
+				3BA47FFE1603032A00C4D678 /* bg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

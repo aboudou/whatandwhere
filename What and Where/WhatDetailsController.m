@@ -48,6 +48,7 @@
     tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addPhotoButtonClicked:)];
     [imageBg addGestureRecognizer:tapGesture];
     
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg.png"]];
 }
  
 - (void)viewWillAppear:(BOOL)animated {
@@ -162,8 +163,8 @@
                                      imageBg.layer.masksToBounds = NO;
                                      
                                      [[self navigationController] setNavigationBarHidden:YES animated:YES];
-                                     [imageView setFrame:CGRectMake(0, 70, 320, 320)];
-                                     [imageBg setFrame:CGRectMake(0, 0, 320, 460)];
+                                     [imageView setFrame:CGRectMake(0, (self.view.frame.size.height - 320) / 2.0f, 320, 320)];
+                                     [imageBg setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
                                      [imageBg setBackgroundColor:[UIColor blackColor]];
                                      
                                      imageResized = YES;
@@ -511,7 +512,7 @@
         cell.imageView.image = [UIImage imageNamed:@"pin"];
     } else {
         [cell.imageView setHidden:YES];
-        cell.imageView.image = [UIImage imageNamed:@"empty"];
+        cell.imageView.image = [UIImage imageNamed:@"pin"];
     }
     
 }

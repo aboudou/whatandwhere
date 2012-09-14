@@ -17,6 +17,7 @@
 @property(nonatomic, strong) IBOutlet UITextField *whereTextField;
 @property(nonatomic, strong) IBOutlet UITextField *priceTextField;
 @property(nonatomic, strong) IBOutlet UILabel *currencyLabel;
+@property(nonatomic, strong) IBOutlet UIButton *bgNotesButton;
 @property(nonatomic, strong) IBOutlet UITextView *notesTextView;
 @property(nonatomic, strong) IBOutlet UIButton *locationButton;
 @property(nonatomic, strong) IBOutlet UILabel *recapLabel;

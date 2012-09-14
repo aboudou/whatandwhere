@@ -14,7 +14,7 @@
 @implementation WhereDetailsController
 
 
-@synthesize scrollView, whereTextField, priceTextField, currencyLabel, notesTextView, locationButton, recapLabel;
+@synthesize scrollView, whereTextField, priceTextField, currencyLabel, bgNotesButton, notesTextView, locationButton, recapLabel;
 @synthesize keyboardVisible, addMode, editMode;
 @synthesize where;
 @synthesize whereLatOld, whereLonOld, whereLatNew, whereLonNew;
@@ -50,11 +50,19 @@
     
     scrollView.contentSize = self.view.frame.size;
     
+    if ([[UIScreen mainScreen] bounds].size.height > 480.0f) {
+        self.locationButton.frame = CGRectMake(20, 447, 280, 37);
+        self.bgNotesButton.frame = CGRectMake(20, 127, 280, 312);
+        self.notesTextView.frame = CGRectMake(28, 134, 263, 297);
+    }
+    
     if (addMode == YES) {
         [self setEditableView];
     } else {
         [self setNonEditableView];
     }
+    
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg.png"]];
     
 }
 
@@ -169,17 +177,22 @@
         return;
     }
     
-    // Get the size of the keyboard.
-    NSDictionary *info = [notif userInfo];
-    NSValue *aValue = [info objectForKey:UIKeyboardFrameBeginUserInfoKey];
-    CGSize keyboardSize = [aValue CGRectValue].size;
-    
-    // Resize the scroll view to make room for the keyboard;
-    CGRect viewFrame = self.view.frame;
-    viewFrame.size.height -= keyboardSize.height;
-    
-    scrollView.frame = viewFrame;
-    keyboardVisible = YES;
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         // Get the size of the keyboard.
+                         NSDictionary *info = [notif userInfo];
+                         NSValue *aValue = [info objectForKey:UIKeyboardFrameBeginUserInfoKey];
+                         CGSize keyboardSize = [aValue CGRectValue].size;
+                         
+                         // Resize the scroll view to make room for the keyboard;
+                         CGRect viewFrame = self.view.frame;
+                         viewFrame.size.height -= keyboardSize.height;
+                         
+                         scrollView.frame = viewFrame;
+                         scrollView.contentSize = self.view.frame.size;
+                         
+                         keyboardVisible = YES;
+                     }];
 }
 
 -(void)keyboardDidHide:(NSNotification *)notif {
@@ -187,23 +200,18 @@
         return;
     }
     
-    // Get the size of the keyboard.
-    NSDictionary *info = [notif userInfo];
-    NSValue *aValue = [info objectForKey:UIKeyboardFrameBeginUserInfoKey];
-    CGSize keyboardSize = [aValue CGRectValue].size;
-    
-    // Reset the height of the scroll view to its original value
-    CGRect viewFrame = self.view.frame;
-    viewFrame.size.height += keyboardSize.height;
-    
-    scrollView.frame = viewFrame;
-    keyboardVisible = NO;
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         scrollView.frame = self.view.frame;
+                         keyboardVisible = NO;
+                     }];
 }
 
 #pragma mark -
 #pragma mark Local functions
 
 -(void) setEditableView {
+    
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
                                                                                            target:self action:@selector(save:)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
