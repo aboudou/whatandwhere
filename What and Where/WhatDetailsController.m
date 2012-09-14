@@ -314,9 +314,7 @@
                                                                                             target:self action:@selector(cancel:)];
 
     whatTextField.enabled = YES;
-    if (IOS_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.0")) {
-        whatTextField.backgroundColor = [UIColor whiteColor];
-    }
+    whatTextField.backgroundColor = [UIColor whiteColor];
     whatTextField.borderStyle =  UITextBorderStyleRoundedRect;
     notesTextView.editable = YES;
     [addButton setEnabled:NO];

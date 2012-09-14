@@ -225,10 +225,8 @@
     currencyLabel.hidden = NO;
     recapLabel.hidden = YES;
     
-    if (IOS_VERSION_GREATER_THAN_OR_EQUAL_TO(@"5.0")) {
-        priceTextField.backgroundColor = [UIColor whiteColor];
-        whereTextField.backgroundColor = [UIColor whiteColor];
-    }
+    priceTextField.backgroundColor = [UIColor whiteColor];
+    whereTextField.backgroundColor = [UIColor whiteColor];
     priceTextField.borderStyle =  UITextBorderStyleRoundedRect;
     whereTextField.borderStyle =  UITextBorderStyleRoundedRect;
 
