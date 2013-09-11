@@ -17,9 +17,9 @@
    version="1.1"
    inkscape:version="0.48.2 r9819"
    sodipodi:docname="icon.svg"
-   inkscape:export-filename="/Users/aboudou/Desktop/icon@2x.png"
-   inkscape:export-xdpi="10.02"
-   inkscape:export-ydpi="10.02">
+   inkscape:export-filename="/Users/aboudou/Desktop/Icon-76@2x.png"
+   inkscape:export-xdpi="13.36"
+   inkscape:export-ydpi="13.36">
   <title
      id="title4103">treasure map</title>
   <defs
@@ -175,14 +175,14 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.76660156"
      inkscape:cx="512"
-     inkscape:cy="512"
+     inkscape:cy="499.60764"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1680"
      inkscape:window-height="1002"
      inkscape:window-x="0"
-     inkscape:window-y="22"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      showguides="true"
      inkscape:guide-bbox="true" />
@@ -379,7 +379,7 @@
          style="fill:url(#linearGradient3990);stroke:#000000;stroke-width:8;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1" />
       <path
          transform="translate(190.233,423.26976)"
-         d="m 824.41784,311.76559 a 108.27007,103.05223 0 1 1 -216.54015,0 108.27007,103.05223 0 1 1 216.54015,0 z"
+         d="m 824.41784,311.76559 c 0,56.91418 -48.47416,103.05224 -108.27007,103.05224 -59.79591,0 -108.27008,-46.13806 -108.27008,-103.05224 0,-56.91417 48.47417,-103.05223 108.27008,-103.05223 59.79591,0 108.27007,46.13806 108.27007,103.05223 z"
          sodipodi:ry="103.05223"
          sodipodi:rx="108.27007"
          sodipodi:cy="311.76559"

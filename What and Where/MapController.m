@@ -114,14 +114,14 @@
 #pragma mark UI management methods
 
 -(IBAction) doneButtonPressed:(id)sender {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 -(IBAction) saveButtonPressed:(id)sender {
     where.whereLatitude = [NSNumber numberWithDouble:pinCoordinates.latitude];
     where.whereLongitude = [NSNumber numberWithDouble:pinCoordinates.longitude];
     
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 -(IBAction) changeLocationButtonPressed:(id)sender {

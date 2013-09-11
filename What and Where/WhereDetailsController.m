@@ -62,8 +62,6 @@
         [self setNonEditableView];
     }
     
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg.png"]];
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -117,7 +115,7 @@
     controller.where = self.where;
     controller.editMode = editMode;
     
-    [self.navigationController presentModalViewController:controller animated:YES];
+    [self.navigationController presentViewController:controller animated:YES completion:NULL];
 }
 
 - (IBAction)switchEdit:(id)sender {
@@ -185,7 +183,7 @@
                          CGSize keyboardSize = [aValue CGRectValue].size;
                          
                          // Resize the scroll view to make room for the keyboard;
-                         CGRect viewFrame = self.view.frame;
+                         CGRect viewFrame = scrollView.frame;
                          viewFrame.size.height -= keyboardSize.height;
                          
                          scrollView.frame = viewFrame;
@@ -202,7 +200,20 @@
     
     [UIView animateWithDuration:0.3
                      animations:^{
-                         scrollView.frame = self.view.frame;
+                         if (!keyboardVisible) {
+                             return;
+                         }
+                         
+                         // Get the size of the keyboard.
+                         NSDictionary *info = [notif userInfo];
+                         NSValue *aValue = [info objectForKey:UIKeyboardFrameBeginUserInfoKey];
+                         CGSize keyboardSize = [aValue CGRectValue].size;
+                         
+                         // Reset the height of the scroll view to its original value
+                         CGRect viewFrame = scrollView.frame;
+                         viewFrame.size.height += keyboardSize.height;
+                         
+                         scrollView.frame = viewFrame;
                          keyboardVisible = NO;
                      }];
 }

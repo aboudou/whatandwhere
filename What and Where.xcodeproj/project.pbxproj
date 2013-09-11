@@ -32,9 +32,9 @@
 		3B4645021372C482009D3008 /* Where.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4644F61372C482009D3008 /* Where.m */; };
 		3B4645031372C482009D3008 /* WhereDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4644F81372C482009D3008 /* WhereDetailsController.m */; };
 		3B6B071A132CEA73006D6E5E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B6B0719132CEA73006D6E5E /* Icon.png */; };
-		3B6B0722132CEB07006D6E5E /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B6B071F132CEB07006D6E5E /* Icon-72.png */; };
 		3B6B0723132CEB07006D6E5E /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B6B0720132CEB07006D6E5E /* Icon@2x.png */; };
 		3B6B0724132CEB07006D6E5E /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 3B6B0721132CEB07006D6E5E /* iTunesArtwork */; };
+		3B7F9B7C178D454B007FCFBC /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F9B69178D3FE1007FCFBC /* Icon-60@2x.png */; };
 		3B950454132CB12A00686AC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B950452132CB12A00686AC0 /* Localizable.strings */; };
 		3B95046E132CB44C00686AC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B95046D132CB44C00686AC0 /* InfoPlist.strings */; };
 		3BA47FFD1603032A00C4D678 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BA47FFB1603032A00C4D678 /* bg.png */; };
@@ -90,9 +90,9 @@
 		3B4644F71372C482009D3008 /* WhereDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhereDetailsController.h; sourceTree = "<group>"; };
 		3B4644F81372C482009D3008 /* WhereDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhereDetailsController.m; sourceTree = "<group>"; };
 		3B6B0719132CEA73006D6E5E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		3B6B071F132CEB07006D6E5E /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		3B6B0720132CEB07006D6E5E /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		3B6B0721132CEB07006D6E5E /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = text; path = iTunesArtwork; sourceTree = "<group>"; };
+		3B7F9B69178D3FE1007FCFBC /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		3B94E22E143CA428003F58B4 /* macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
 		3B950453132CB12A00686AC0 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B950455132CB13800686AC0 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 				3BEAB45E13684B12000DA2B1 /* Default.png */,
 				3BEAB45F13684B12000DA2B1 /* Default@2x.png */,
 				3BEC2D4516023E7300B27226 /* Default-568h@2x.png */,
-				3B6B071F132CEB07006D6E5E /* Icon-72.png */,
+				3B7F9B69178D3FE1007FCFBC /* Icon-60@2x.png */,
 				3B6B0720132CEB07006D6E5E /* Icon@2x.png */,
 				3B6B0719132CEA73006D6E5E /* Icon.png */,
 				3B6B0721132CEB07006D6E5E /* iTunesArtwork */,
@@ -301,7 +301,12 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = GBBYECNDQ9;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "What and Where" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -333,7 +338,6 @@
 				3B950454132CB12A00686AC0 /* Localizable.strings in Resources */,
 				3B95046E132CB44C00686AC0 /* InfoPlist.strings in Resources */,
 				3B6B071A132CEA73006D6E5E /* Icon.png in Resources */,
-				3B6B0722132CEB07006D6E5E /* Icon-72.png in Resources */,
 				3B6B0723132CEB07006D6E5E /* Icon@2x.png in Resources */,
 				3B6B0724132CEB07006D6E5E /* iTunesArtwork in Resources */,
 				3BF5E8C51344C0F50062F8E6 /* arrow.png in Resources */,
@@ -343,6 +347,7 @@
 				3B2C923B136801E900484A36 /* empty.png in Resources */,
 				3B2C923C136801E900484A36 /* empty@2x.png in Resources */,
 				3BEAB46013684B12000DA2B1 /* Default.png in Resources */,
+				3B7F9B7C178D454B007FCFBC /* Icon-60@2x.png in Resources */,
 				3BEAB46113684B12000DA2B1 /* Default@2x.png in Resources */,
 				3BF46702150C92BC00795041 /* MapController.xib in Resources */,
 				3BF46706150C980700795041 /* WhatDetailsController.xib in Resources */,
@@ -408,7 +413,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Arnaud Boudou (RTC3674WRG)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -416,7 +421,7 @@
 				GCC_PREFIX_HEADER = "What and Where/What__Where__How_Much_Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "What and Where/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "What and Where";
 				PROVISIONING_PROFILE = "5E426636-AB1B-4290-8A57-DED974153646";
 			};
@@ -427,13 +432,13 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Arnaud Boudou";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "What and Where/What__Where__How_Much_Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "What and Where/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "What and Where";
 				PROVISIONING_PROFILE = "160F77C1-FFB9-4836-9895-CF1ECBAF945D";
 				VALIDATE_PRODUCT = YES;
@@ -443,7 +448,6 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Arnaud Boudou (RTC3674WRG)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
@@ -452,7 +456,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PROVISIONING_PROFILE = "D7BA50FF-79B1-4602-AC1C-905C2D7F55D0";
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "5E426636-AB1B-4290-8A57-DED974153646";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -461,7 +466,6 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Arnaud Boudou";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
@@ -471,7 +475,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "3E1E6784-5B5A-428C-B4EF-87DA53AA410D";
+				PROVISIONING_PROFILE = "160F77C1-FFB9-4836-9895-CF1ECBAF945D";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;

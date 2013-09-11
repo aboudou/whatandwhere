@@ -43,12 +43,9 @@
     whatTextField.text = what.whatName;
     notesTextView.text = what.whatNotes;
     
-    scrollView.contentSize = self.view.frame.size;
-    
     tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addPhotoButtonClicked:)];
     [imageBg addGestureRecognizer:tapGesture];
     
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"bg.png"]];
 }
  
 - (void)viewWillAppear:(BOOL)animated {
@@ -101,6 +98,9 @@
     [noPhoto setImage:[UIImage imageNamed:@"empty"]];
     [self.addButton setTitle:NSLocalizedString(@"Add", @"") forState:UIControlStateNormal];
     [self.addButton setTitle:NSLocalizedString(@"Add", @"") forState:UIControlStateHighlighted];
+    
+    scrollView.contentSize = self.view.frame.size;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -148,7 +148,7 @@
             picker.delegate = self;
             picker.allowsEditing = YES;
             
-            [self presentModalViewController:picker animated:YES];
+            [self presentViewController:picker animated:YES completion:NULL];
         }
     } else {
         if ([imageView image] != nil) {
@@ -170,7 +170,7 @@
                                      imageResized = YES;
                                  }
                                  completion:^(BOOL finished){
-                                     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:YES];
+                                     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
                                  }];
             } else {
                 [UIView animateWithDuration:0.3
@@ -279,7 +279,7 @@
     CGSize keyboardSize = [aValue CGRectValue].size;
     
     // Resize the scroll view to make room for the keyboard;
-    CGRect viewFrame = self.view.frame;
+    CGRect viewFrame = scrollView.frame;
     viewFrame.size.height -= keyboardSize.height;
     
     scrollView.frame = viewFrame;
@@ -297,7 +297,7 @@
     CGSize keyboardSize = [aValue CGRectValue].size;
     
     // Reset the height of the scroll view to its original value
-    CGRect viewFrame = self.view.frame;
+    CGRect viewFrame = scrollView.frame;
     viewFrame.size.height += keyboardSize.height;
     
     scrollView.frame = viewFrame;
@@ -359,7 +359,7 @@
         delPhotoButton.hidden = NO;
     }
     
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 #pragma mark -
@@ -381,7 +381,7 @@
             return;
     }
     
-    [self presentModalViewController:picker animated:YES];
+    [self presentViewController:picker animated:YES completion:NULL];
 }
 
 #pragma mark -
